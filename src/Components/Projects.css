@@ -1,0 +1,13 @@
+.project {
+    width : 80%;
+    align-self : center;
+    justify-self : center;
+    display : grid;
+    grid-template-columns : 30% 70%;
+    border-radius : 20px;
+    transition : transform 1s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}

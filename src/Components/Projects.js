@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Link, Route, HashRouter as Router } from 'react-router-dom';
 import {Pagination} from 'antd';
 import Reimburse from './Reimburse.js';
 // import styled from 'styled-components';

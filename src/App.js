@@ -26,7 +26,7 @@ class App extends Component {
                 <Router>
                     <Header style={headerstyle}>
                         <Link to="/">About Me</Link>
-                        <Link to="Welvin Bun 2019.pdf" target="_blank">Resume</Link>
+                        <Link to="../public/Welvin Bun 2019.pdf" target="_blank">Resume</Link>
                         <Link to="/projects">Projects</Link>
                     </Header>
                     <Content>

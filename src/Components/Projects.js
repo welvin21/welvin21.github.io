@@ -1,59 +1,59 @@
-import React, { Component } from 'react';
-import { Link, Route, HashRouter as Router } from 'react-router-dom';
-import {Pagination} from 'antd';
-import Reimburse from './Reimburse.js';
-// import styled from 'styled-components';
-import background from './images/background1.jpg';
-import projectimg1 from './images/finhack2019.jpg';
-import projectimg2 from './images/greenwall.jpg';
-import './Projects.css';
+import React from 'react';
+import Project from './Project';
+import sls from '../assets/images/sls.png';
+import mig from '../assets/images/greenwall.png';
+import navis from '../assets/images/navis.png';
+import digibot from '../assets/images/digibot.png';
+import pa from '../assets/images/personal-assistant.png';
 
-class Projects extends Component{
-    render(){
-        const containerstyle = {
-            display : "grid",
-            padding : "30px 0",
-            gridGap : "20px",
-            backgroundImage : "url(" +background+")",
-            backgroundSize : "cover"
+const projects = [
+  {
+    pic : pa,
+    title : 'Personal Assistant',
+    desc : 'Speech recognition powered python script to automate your daily tasks such as checking the weather reports, opening web applications, or surfing through wikipedia.',
+    url : 'http://www.github.com/welvin21/personal_assistant',
+    tags : ['python','wikipediaAPI','openweathermapAPI','pyttsx3']
+  },
+  {
+    pic : mig,
+    title : 'Modular Integrated Greenwall',
+    desc : 'Modular greenwall which implements sustainability development practice. Well-equipped with soil moisturizer sensor which supports self-watering functionality.',
+    url : 'https://docs.google.com/presentation/d/1JWOyxk2L_tOsoNyJBNX-x5kVGDJEj3iK6HNTSZsYVww/edit?usp=sharing',
+    tags : ['arduino']
+  },
+  {
+    pic : sls,
+    title : 'Smart Laundry System',
+    desc : 'A washing machine tracker application by RCTech CLub. Aims to ease the life of R.C. Lee hall residents by providing them the ability to track the status of each washing machines on the 16th floor anywhere, anytime.',
+    url : 'http://sls.rctech.club',
+    tags : ['python','javascript','react','AWS','firebase','arduino']
+  },
+  {
+    pic : navis,
+    title : 'Navis',
+    desc : 'A centralized system to make data communication in the credit insurance escalation process faster.',
+    url : 'http://www.navis-app.co',
+    tags : ['javascript','react','express','firebase']
+  },
+  {
+    pic : digibot,
+    title : 'Digibot',
+    desc : 'Virtual banking assistant focusing on bot interactions to make loan application process easier. Comprises text, voice, and click-based user interactions with well-designed UI.',
+    url : 'http://rebrand.ly/chappuishalder',
+    tags : ['javascript','react-native','AWS']
+  },
+];
+const Projects = () => {
+  return(
+    <div className='projects-container' id='projects'>
+      <h1 style={{color: '#fff'}}>Past works</h1>
+      <div className='projects'>
+        {
+          projects.map(project => <Project key={project.title} project={project}/>)
         }
-        const imagestyle = {
-            width : "100%",
-            borderBottomLeftRadius : "20px",
-            borderTopLeftRadius : "20px",
-            height : "100%"
-        }
-        const descriptionstyle = {
-            display : "grid",
-            padding : "10px 0",
-            gridTemplateRows : "40% 60%",
-            backgroundColor : "#43455C",
-            borderBottomRightRadius : "20px",
-            borderTopRightRadius : "20px",
-            height : "100%"
-        }
-
-        return(
-            <div  style={containerstyle}>
-                <Router>
-                    <Link to="/projects/reimburse" target="_blank"  className = "project">
-                        <img src={projectimg1} style={imagestyle}/>
-                        <div style = {descriptionstyle}>
-                            <h1 style={{fontSize : "36px"}}>Re-imburse</h1>
-                            <p style={{fontFamily : "Satisfy",fontSize : "20px"}}>A friendly solution to employee reimbursement process. </p>
-                        </div>
-                    </Link>
-                    <Link to="/projects/greenwall" target="_blank" className = "project">
-                        <img src={projectimg2} style={imagestyle}/>
-                        <div style = {descriptionstyle}>
-                            <h1 style={{fontSize : "36px"}}>Smart Green Wall</h1>
-                            <p style={{fontFamily : "Satisfy",fontSize : "20px"}}>Self-watering green wall which is easy to be integrated everywhere</p>
-                        </div>
-                    </Link>
-                </Router>
-            </div>
-        );
-    }
+      </div>
+    </div>
+  );
 }
 
 export default Projects;

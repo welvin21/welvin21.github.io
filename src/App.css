@@ -1,4 +1,213 @@
-@import '~antd/dist/antd.css';
-.App {
+/* Header */
+.header{
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0; 
+}
+
+.header-left{
+  display: inline;
+}
+
+.header-right{
+  float: right;
+  padding: 0 1.5vw;
+}
+
+.item{
+  display: inline;
+  margin: 10px;
+  color:#e6e6e6;
+  transition: 0.3s;
+  font-family: 'Noto Sans TC',sans-serif;
+  font-weight: 300;
+  font-size: 120%;
+}
+
+.item:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color:#fff;
+  cursor: pointer;
+}
+
+.social-icon{
+  display: inline;
+  color : #e6e6e6;
+  font-size: 200%;
+  margin: 0px 10px;
+  transition: 0.3s;
+}
+
+.social-icon:hover{
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Home */
+.home{
+  background: url('./assets/images/background1.png') no-repeat;
+  background-size: cover;
+  height: 100vh;
   text-align: center;
+}
+
+.quote{
+  margin: auto;
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  color: #fff;
+}
+
+.robert{
+  font-size: 36px;
+}
+
+/* About */
+
+.about{
+  height: content;
+  box-sizing: border-box;
+  /* background: linear-gradient(#7bad7b,#2cfc2c); */
+  background: linear-gradient(#1a1a1a,#333333);
+  padding: min(5vw,5vh);
+}
+
+.content{
+  background-color:#fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: content;
+
+  padding: 3%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 2%;
+}
+
+.mypic{
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.description{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2vw;
+}
+
+.social{
+  display: none;
+}
+
+/* Projects */
+
+.projects-container{
+  padding: min(5vw,5vh);
+  padding-bottom: 0;
+  background: linear-gradient(#333333, #4d4d4d);
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+
+.projects{
+  column-count: 3;
+  column-gap: 2%;
+  text-align: left;
+  height: fit-content;
+}
+
+.tag{
+  border-radius: 3px;
+  padding: 0px 3px;
+  font-size: 1vw;
+  margin: 0px 2% 0 0;
+  display: inline-block;
+}
+
+.project-card{
+  padding: 0px;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: 0.3s;
+  font-size: 1.5vw;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+.project-card:hover{
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+
+/* Footer */
+
+.footer{
+  background: linear-gradient(#d9d9d9,#e6e6e6);
+  padding: 30px 20px;
+  font-size: max(12px,1vw);
+}
+/* Media Query */
+@media (max-width : 620px){
+  .home{
+    background: url('./assets/images/background2.png') no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  .quote{
+    width: 90%;
+    font-size: 4vw;
+  }
+  .robert{
+    font-size: 6vw;
+  }
+  .header{
+    text-align: center;
+    padding: 1%;
+  }
+  .header-right{
+    display: none;
+  }
+  .item{
+    font-size: 4vw;
+  }
+  .content, .mypic, .description, .social{
+    display: block;
+  }
+  .description{
+    font-size: 2vh;
+  }
+  .social{
+    text-align: center;
+  }
+  .social-icon{
+    color: #000;
+  }
+  .projects{
+    column-count: 1;
+  }
+  .tag{
+    font-size: 2vh;
+  }
+  .project-card{
+    font-size: 2.5vh;
+  }
+}
+
+@media (max-height : 500px){
+  .quote{
+    top: 60vh;
+    font-size: 4vh;
+  }
+  .robert{
+    font-size: 6vh;
+  }
 }

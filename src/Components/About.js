@@ -29,6 +29,10 @@ const socials = [
   },
 ]
 
+const openSocialMedia = social => {
+  window.open(social.url,'_blank');
+}
+
 const About = () => {
   return(
     <div className='about' id='about'>
@@ -39,7 +43,7 @@ const About = () => {
           <hr/>
           {socials.map(social => {
             return (
-              <Icon className='social-icon' type={social.title} key={social.title} onClick={()=>{window.open(social.url,'_blank')}}/>
+              <Icon className='social-icon' type={social.title} key={social.title} onClick={()=>openSocialMedia(social)}/>
             );
           })}
         </div>

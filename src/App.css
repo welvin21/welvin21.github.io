@@ -75,7 +75,6 @@
 .about{
   height: content;
   box-sizing: border-box;
-  /* background: linear-gradient(#7bad7b,#2cfc2c); */
   background: linear-gradient(#1a1a1a,#333333);
   padding: min(5vw,5vh);
 }
@@ -179,6 +178,10 @@
   .item{
     font-size: 4vw;
   }
+  .item:hover{
+    text-decoration: none;
+    color: #e6e6e6;
+  }
   .content, .mypic, .description, .social{
     display: block;
   }
@@ -188,7 +191,7 @@
   .social{
     text-align: center;
   }
-  .social-icon{
+  .social-icon, .social-icon:hover{
     color: #000;
   }
   .projects{
@@ -200,6 +203,9 @@
   .project-card{
     font-size: 2.5vh;
   }
+  .project-card:hover{
+    background-color: #fff;
+  }
 }
 
 @media (max-height : 500px){
@@ -209,5 +215,12 @@
   }
   .robert{
     font-size: 6vh;
+  }
+  .item:hover{
+    text-decoration: none;
+    color: #e6e6e6;
+  }
+  .project-card:hover{
+    background-color: #fff;
   }
 }

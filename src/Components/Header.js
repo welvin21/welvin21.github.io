@@ -1,6 +1,5 @@
 import React from 'react';
 import { Icon } from 'antd';
-import resume from '../assets/docs/resume.pdf';
 
 const items = [
   {
@@ -41,7 +40,7 @@ const Header = () => {
             <p className='item' key={item.title} onClick={()=>{document.getElementById(item.id).scrollIntoView()}}>{item.title}</p>
           );
         })}
-        <p className='item' key='resume' onClick={()=>window.open(resume)}>Resume</p>
+        <p className='item' key='resume' onClick={()=>window.open(process.env.PUBLIC_URL + '/assets/resume.html','_blank')}>Resume</p>
       </div>
 
       <div className='header-right'>

@@ -24,7 +24,7 @@ const projects = [
   {
     pic : sls,
     title : 'Smart Laundry System',
-    desc : 'A washing machine tracker application by RCTech CLub. Aims to ease the life of R.C. Lee hall residents by providing them the ability to track the status of each washing machines on the 16th floor anywhere, anytime.',
+    desc : 'A washing machine tracker application by RCTech Club. Aims to ease the life of R.C. Lee hall residents by providing them the ability to track the status of each washing machines on the 16th floor anywhere, anytime.',
     url : 'http://sls.rctech.club',
     tags : ['python','javascript','react','AWS','firebase','arduino']
   },

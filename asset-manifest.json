@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.7dc9ffaa.chunk.css",
+    "main.css": "/static/css/main.9dc0db34.chunk.css",
     "main.js": "/static/js/main.38903f07.chunk.js",
     "main.js.map": "/static/js/main.38903f07.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
@@ -8,9 +8,9 @@
     "static/js/2.d04acc5e.chunk.js": "/static/js/2.d04acc5e.chunk.js",
     "static/js/2.d04acc5e.chunk.js.map": "/static/js/2.d04acc5e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.9fec7b16ff40247ebad2c145424e6bc7.js": "/precache-manifest.9fec7b16ff40247ebad2c145424e6bc7.js",
+    "precache-manifest.dc2b110fba312a3f2b488a06d304c080.js": "/precache-manifest.dc2b110fba312a3f2b488a06d304c080.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.7dc9ffaa.chunk.css.map": "/static/css/main.7dc9ffaa.chunk.css.map",
+    "static/css/main.9dc0db34.chunk.css.map": "/static/css/main.9dc0db34.chunk.css.map",
     "static/media/App.css": "/static/media/background2.0e218e77.png",
     "static/media/digibot.png": "/static/media/digibot.255897a4.png",
     "static/media/greenwall.png": "/static/media/greenwall.cd71a39a.png",

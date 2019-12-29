@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/personal_website/static/css/main.ec3c3fb0.chunk.css",
+    "main.js": "/personal_website/static/js/main.cde6fb12.chunk.js",
+    "main.js.map": "/personal_website/static/js/main.cde6fb12.chunk.js.map",
+    "runtime~main.js": "/personal_website/static/js/runtime~main.5454f9ef.js",
+    "runtime~main.js.map": "/personal_website/static/js/runtime~main.5454f9ef.js.map",
+    "static/js/2.1f3e3074.chunk.js": "/personal_website/static/js/2.1f3e3074.chunk.js",
+    "static/js/2.1f3e3074.chunk.js.map": "/personal_website/static/js/2.1f3e3074.chunk.js.map",
+    "index.html": "/personal_website/index.html",
+    "precache-manifest.fd46a24b431fed8d8a2825e5d101a907.js": "/personal_website/precache-manifest.fd46a24b431fed8d8a2825e5d101a907.js",
+    "service-worker.js": "/personal_website/service-worker.js",
+    "static/css/main.ec3c3fb0.chunk.css.map": "/personal_website/static/css/main.ec3c3fb0.chunk.css.map",
+    "static/media/App.css": "/personal_website/static/media/background2.0e218e77.png",
+    "static/media/digibot.png": "/personal_website/static/media/digibot.255897a4.png",
+    "static/media/greenwall.png": "/personal_website/static/media/greenwall.cd71a39a.png",
+    "static/media/mypic.png": "/personal_website/static/media/mypic.04ce06ac.png",
+    "static/media/navis.png": "/personal_website/static/media/navis.12ed73ae.png",
+    "static/media/personal-assistant.png": "/personal_website/static/media/personal-assistant.9eb0574b.png",
+    "static/media/sls.png": "/personal_website/static/media/sls.c1e1fbd5.png"
+  }
+}

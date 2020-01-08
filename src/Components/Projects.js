@@ -5,21 +5,22 @@ import mig from '../assets/images/greenwall.png';
 import navis from '../assets/images/navis.png';
 import digibot from '../assets/images/digibot.png';
 import pa from '../assets/images/personal-assistant.png';
+import sort from '../assets/images/sort.gif';
 
 const projects = [
   {
-    pic : pa,
-    title : 'Personal Assistant',
-    desc : 'Speech recognition powered python script to automate your daily tasks such as checking the weather reports, opening web applications, or surfing through wikipedia.',
-    url : 'https://www.github.com/welvin21/personal_assistant',
-    tags : ['python','wikipediaAPI','openweathermapAPI','pyttsx3']
+    pic : sort,
+    title : 'SortIt',
+    desc : 'Sorting algorithms visualizer to make learning process easier for everyone.',
+    url : 'https://sort.welvin21.com',
+    tags : ['javascript','react','redux']
   },
   {
-    pic : mig,
-    title : 'Modular Integrated Greenwall',
-    desc : 'Modular greenwall which implements sustainability development practice. Well-equipped with soil moisturizer sensor which supports self-watering functionality.',
-    url : 'https://docs.google.com/presentation/d/1JWOyxk2L_tOsoNyJBNX-x5kVGDJEj3iK6HNTSZsYVww/edit?usp=sharing',
-    tags : ['arduino']
+    pic : digibot,
+    title : 'Digibot',
+    desc : 'Virtual banking assistant focusing on bot interactions to make loan application process easier. Comprises text, voice, and click-based user interactions with well-designed UI.',
+    url : 'https://rebrand.ly/chappuishalder',
+    tags : ['javascript','react-native','AWS']
   },
   {
     pic : sls,
@@ -36,11 +37,18 @@ const projects = [
     tags : ['javascript','react','express','firebase']
   },
   {
-    pic : digibot,
-    title : 'Digibot',
-    desc : 'Virtual banking assistant focusing on bot interactions to make loan application process easier. Comprises text, voice, and click-based user interactions with well-designed UI.',
-    url : 'https://rebrand.ly/chappuishalder',
-    tags : ['javascript','react-native','AWS']
+    pic : pa,
+    title : 'Personal Assistant',
+    desc : 'Speech recognition powered python script to automate your daily tasks such as checking the weather reports, opening web applications, or surfing through wikipedia.',
+    url : 'https://www.github.com/welvin21/personal_assistant',
+    tags : ['python','wikipediaAPI','openweathermapAPI','pyttsx3']
+  },
+  {
+    pic : mig,
+    title : 'Modular Integrated Greenwall',
+    desc : 'Modular greenwall which implements sustainability development practice. Well-equipped with soil moisturizer sensor which supports self-watering functionality.',
+    url : 'https://docs.google.com/presentation/d/1JWOyxk2L_tOsoNyJBNX-x5kVGDJEj3iK6HNTSZsYVww/edit?usp=sharing',
+    tags : ['arduino']
   },
 ];
 const Projects = () => {

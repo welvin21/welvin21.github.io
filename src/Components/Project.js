@@ -3,7 +3,7 @@ import { Tag } from 'antd';
 
 const identifyTag = tag => {
   const languages = ['python','javascript','java','c++'];
-  const libraries = ['react','react-native','express'];
+  const libraries = ['react','react-native','express','redux'];
   const clouds = ['firebase','AWS','azure'];
 
   let color = '#f50';

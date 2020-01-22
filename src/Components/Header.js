@@ -40,13 +40,13 @@ const Header = () => {
             <p className='item' key={item.title} onClick={()=>{document.getElementById(item.id).scrollIntoView()}}>{item.title}</p>
           );
         })}
-        <p className='item' key='resume' onClick={()=>window.open(process.env.PUBLIC_URL + '/assets/resume.html','_blank')}>Resume</p>
+        <p className='item' key='resume' onClick={()=>window.open(process.env.PUBLIC_URL + '/assets/resume.html','_blank','noopener')}>Resume</p>
       </div>
 
       <div className='header-right'>
         {socials.map(social => {
           return (
-            <Icon className='social-icon' type={social.title} key={social.title} onClick={()=>{window.open(social.url,'_blank')}}/>
+            <Icon className='social-icon' type={social.title} key={social.title} onClick={()=>{window.open(social.url,'_blank','noopener')}}/>
           );
         })}
       </div>

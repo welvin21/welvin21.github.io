@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+  - 'stable'
+cache: 
+ directories:
+  - node_modules
+jobs:
+  include: 
+    - stage: test
+      install: 
+        - npm install
+      script:
+        - echo "Test react-app"
+        - npm test
+    - stage: deployment
+      install: 
+        - npm install
+      script:
+        - echo "Deploy to gh-pages"
+        - npm run build
+      deploy: 
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: ./build
+        keep_history: true
+        on:
+          all_branches: true
+          condition: $TRAVIS_BRANCH =~ ^(master)$
+    - stage: test-deployment
+      script: 
+        - echo "Test deployment"
+        - curl https://welvin21.com

@@ -20,7 +20,7 @@ const identifyTag = tag => {
 const Project = props => {
   const { project : {pic, title, desc, url,tags}} = props;
   return(
-    <div className='project-card' onClick={() => {window.open(url,'_blank')}}>
+    <div className='project-card' onClick={() => {window.open(url,'_blank','noopener')}}>
       <div>
         <img style={{width: '100%', borderTopLeftRadius: 5, borderTopRightRadius: 5}} src={pic} alt={title}/>
       </div>

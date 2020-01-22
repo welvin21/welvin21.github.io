@@ -30,7 +30,7 @@ const socials = [
 ]
 
 const openSocialMedia = social => {
-  window.open(social.url,'_blank');
+  window.open(social.url,'_blank','noopener');
 }
 
 const About = () => {

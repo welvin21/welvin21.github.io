@@ -6,6 +6,12 @@ cache:
   - node_modules
 jobs:
   include: 
+    - stage: test
+      install: 
+        - npm install
+      script:
+        - echo "Test react-app"
+        - npm test
     - stage: deployment
       install: 
         - npm install

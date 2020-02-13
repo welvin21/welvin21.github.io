@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.9dc0db34.chunk.css",
-    "main.js": "/static/js/main.f1085a0f.chunk.js",
-    "main.js.map": "/static/js/main.f1085a0f.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.5b9e0d37.chunk.js": "/static/js/2.5b9e0d37.chunk.js",
-    "static/js/2.5b9e0d37.chunk.js.map": "/static/js/2.5b9e0d37.chunk.js.map",
+    "main.css": "/static/css/main.df8fb0a0.chunk.css",
+    "main.js": "/static/js/main.ad06cee5.chunk.js",
+    "main.js.map": "/static/js/main.ad06cee5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.31e764fa.js",
+    "runtime-main.js.map": "/static/js/runtime-main.31e764fa.js.map",
+    "static/css/2.9ddb28ea.chunk.css": "/static/css/2.9ddb28ea.chunk.css",
+    "static/js/2.68d93258.chunk.js": "/static/js/2.68d93258.chunk.js",
+    "static/js/2.68d93258.chunk.js.map": "/static/js/2.68d93258.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1cbe1648b2a1f4e184d6d0f4a189a10e.js": "/precache-manifest.1cbe1648b2a1f4e184d6d0f4a189a10e.js",
+    "precache-manifest.68881f5f71d42224f7a0345c5f1cdf5a.js": "/precache-manifest.68881f5f71d42224f7a0345c5f1cdf5a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.9dc0db34.chunk.css.map": "/static/css/main.9dc0db34.chunk.css.map",
+    "static/css/2.9ddb28ea.chunk.css.map": "/static/css/2.9ddb28ea.chunk.css.map",
+    "static/css/main.df8fb0a0.chunk.css.map": "/static/css/main.df8fb0a0.chunk.css.map",
+    "static/js/2.68d93258.chunk.js.LICENSE.txt": "/static/js/2.68d93258.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/background2.0e218e77.png",
     "static/media/digibot.png": "/static/media/digibot.ad2dd561.png",
     "static/media/greenwall.png": "/static/media/greenwall.cd71a39a.png",
@@ -19,5 +22,12 @@
     "static/media/personal-assistant.png": "/static/media/personal-assistant.9eb0574b.png",
     "static/media/sls.png": "/static/media/sls.c1e1fbd5.png",
     "static/media/sort.gif": "/static/media/sort.42469ab7.gif"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.31e764fa.js",
+    "static/css/2.9ddb28ea.chunk.css",
+    "static/js/2.68d93258.chunk.js",
+    "static/css/main.df8fb0a0.chunk.css",
+    "static/js/main.ad06cee5.chunk.js"
+  ]
 }

@@ -4,11 +4,13 @@
   "homepage": "https://welvin21.com",
   "private": true,
   "dependencies": {
-    "antd": "^3.20.2",
+    "@material-ui/core": "^4.9.2",
+    "@material-ui/icons": "^4.9.1",
+    "antd": "^3.26.9",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "^3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -142,11 +142,6 @@
   width: 100%;
 }
 
-.project-card:hover{
-  cursor: pointer;
-  background-color: #d9d9d9;
-}
-
 /* Footer */
 
 .footer{
@@ -155,7 +150,7 @@
   font-size: max(12px,1vw);
 }
 /* Media Query */
-@media (max-width : 620px){
+@media (max-width : 567px){
   .home{
     background: url('./assets/images/background2.png') no-repeat;
     background-size: cover;
@@ -203,9 +198,6 @@
   .project-card{
     font-size: 2.5vh;
   }
-  .project-card:hover{
-    background-color: #fff;
-  }
 }
 
 @media (max-height : 500px){
@@ -219,8 +211,5 @@
   .item:hover{
     text-decoration: none;
     color: #e6e6e6;
-  }
-  .project-card:hover{
-    background-color: #fff;
   }
 }

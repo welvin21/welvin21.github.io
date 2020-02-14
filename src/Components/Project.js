@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, Collapse } from '@material-ui/core';
-import { GitHub, ExpandMore, ExpandLess } from '@material-ui/icons';
+import {
+  GitHub,
+  LaunchRounded,
+  ExpandMore,
+  ExpandLess
+} from '@material-ui/icons';
 import { Tag, notification } from 'antd';
 import 'antd/dist/antd.css';
 
@@ -12,25 +17,22 @@ const useStyles = makeStyles(theme => ({
     borderTopRightRadius: 5
   },
   buttons: {
+    float: 'left',
     marginBottom: 10,
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    gridGap: 10
+    gridGap: 'min(10%,10px)'
   }
 }));
 
 const identifyTag = tag => {
   const languages = ['python', 'javascript', 'java', 'c++'];
-  const libraries = ['react', 'react-native', 'express', 'redux'];
-  const clouds = ['firebase', 'AWS', 'azure'];
 
   let color = 'magenta';
   if (languages.includes(tag)) {
     color = 'blue';
-  } else if (libraries.includes(tag) || tag.toLowerCase().includes('api')) {
+  } else {
     color = 'green';
-  } else if (clouds.includes(tag)) {
-    color = 'orange';
   }
   return (
     <Tag key={tag} className="tag" color={color}>
@@ -65,34 +67,24 @@ const Project = ({ project: { pic, title, desc, url, github, tags } }) => {
           {tags.map(tag => identifyTag(tag))}
         </div>
         <h2 style={{ color: '#4d4d4d', marginBottom: 0 }}>{title}</h2>
-        <p style={{ paddingBottom: 10, marginTop: 5 }}>{desc}</p>
+        <p style={{ marginTop: 5 }}>{desc}</p>
         <div className={classes.buttons}>
-          <Button
-            variant="outlined"
-            color="primary"
-            size="small"
-            disableElevation
-            style={{ fontSize: 'min(100%, 16px)' }}
+          <LaunchRounded
+            style={{ fontSize: 'min(30px, 150%)' }}
+            className="project-button"
             onClick={() => {
               window.open(url, '_blank', 'noopener');
             }}
-          >
-            See more
-          </Button>
-          <Button
-            variant="outlined"
-            size="small"
-            disableElevation
-            startIcon={<GitHub />}
-            style={{ fontSize: 'min(100%, 16px)' }}
+          />
+          <GitHub
+            style={{ fontSize: 'min(30px, 150%)' }}
+            className="project-button"
             onClick={() => {
               github
                 ? window.open(github, '_blank', 'noopener')
                 : openMessage();
             }}
-          >
-            Code
-          </Button>
+          />
         </div>
       </Collapse>
       <Button fullWidth={true} onClick={() => setCollapsed(!isCollapsed)}>

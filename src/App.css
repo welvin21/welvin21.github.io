@@ -1,61 +1,61 @@
 /* Header */
-.header{
+.header {
   padding: 20px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
 }
 
-.header-left{
+.header-left {
   display: inline;
 }
 
-.header-right{
+.header-right {
   float: right;
   padding: 0 1.5vw;
 }
 
-.item{
+.item {
   display: inline;
   margin: 10px;
-  color:#e6e6e6;
+  color: #e6e6e6;
   transition: 0.3s;
-  font-family: 'Noto Sans TC',sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   font-weight: 300;
   font-size: 120%;
 }
 
-.item:hover{
+.item:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  color:#fff;
+  color: #fff;
   cursor: pointer;
 }
 
-.social-icon{
+.social-icon {
   display: inline;
-  color : #e6e6e6;
+  color: #e6e6e6;
   font-size: 200%;
   margin: 0px 10px;
   transition: 0.3s;
 }
 
-.social-icon:hover{
+.social-icon:hover {
   color: #fff;
   cursor: pointer;
 }
 
 /* Home */
-.home{
+.home {
   background: url('./assets/images/background1.png') no-repeat;
   background-size: cover;
   height: 100vh;
   text-align: center;
 }
 
-.quote{
+.quote {
   margin: auto;
   position: absolute;
   top: 40vh;
@@ -66,64 +66,64 @@
   color: #fff;
 }
 
-.robert{
+.robert {
   font-size: 36px;
 }
 
 /* About */
 
-.about{
+.about {
   height: content;
   box-sizing: border-box;
-  background: linear-gradient(#1a1a1a,#333333);
-  padding: min(5vw,5vh);
+  background: linear-gradient(#1a1a1a, #333333);
+  padding: min(5vw, 5vh);
 }
 
-.content{
-  background-color:#fff;
+.content {
+  background-color: #fff;
   border-radius: 5px;
   box-sizing: border-box;
   height: content;
 
   padding: 3%;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2%;
 }
 
-.mypic{
+.mypic {
   border-radius: 5px;
   width: 100%;
   height: auto;
 }
 
-.description{
+.description {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2vw;
 }
 
-.social{
+.social {
   display: none;
 }
 
 /* Projects */
 
-.projects-container{
-  padding: min(5vw,5vh);
+.projects-container {
+  padding: min(5vw, 5vh);
   padding-bottom: 0;
   background: linear-gradient(#333333, #4d4d4d);
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 
-.projects{
+.projects {
   column-count: 3;
   column-gap: 2%;
   text-align: left;
   height: fit-content;
 }
 
-.tag{
+.tag {
   border-radius: 3px;
   padding: 0px 3px;
   font-size: 1vw;
@@ -131,7 +131,7 @@
   display: inline-block;
 }
 
-.project-card{
+.project-card {
   padding: 0px;
   border-radius: 5px;
   background-color: #fff;
@@ -142,74 +142,92 @@
   width: 100%;
 }
 
+.project-button:hover {
+  position: relative;
+  top: -5px;
+  cursor: pointer;
+}
+
 /* Footer */
 
-.footer{
-  background: linear-gradient(#d9d9d9,#e6e6e6);
+.footer {
+  background: linear-gradient(#d9d9d9, #e6e6e6);
   padding: 30px 20px;
-  font-size: max(12px,1vw);
+  font-size: max(12px, 1vw);
 }
 /* Media Query */
-@media (max-width : 567px){
-  .home{
+@media (max-width: 567px) {
+  .home {
     background: url('./assets/images/background2.png') no-repeat;
     background-size: cover;
     height: 100vh;
   }
-  .quote{
+  .quote {
     width: 90%;
     font-size: 4vw;
   }
-  .robert{
+  .robert {
     font-size: 6vw;
   }
-  .header{
+  .header {
     text-align: center;
     padding: 1%;
   }
-  .header-right{
+  .header-right {
     display: none;
   }
-  .item{
+  .item {
     font-size: 4vw;
   }
-  .item:hover{
+  .item:hover {
     text-decoration: none;
     color: #e6e6e6;
   }
-  .content, .mypic, .description, .social{
+  .content,
+  .mypic,
+  .description,
+  .social {
     display: block;
   }
-  .description{
+  .description {
     font-size: 2vh;
   }
-  .social{
+  .social {
     text-align: center;
   }
-  .social-icon, .social-icon:hover{
+  .social-icon,
+  .social-icon:hover {
     color: #000;
   }
-  .projects{
+  .projects {
     column-count: 1;
   }
-  .tag{
+  .tag {
     font-size: 2vh;
   }
-  .project-card{
+  .project-card {
     font-size: 2.5vh;
+  }
+  .project-button:hover {
+    position: relative;
+    top: 0px;
   }
 }
 
-@media (max-height : 500px){
-  .quote{
+@media (max-height: 500px) {
+  .quote {
     top: 60vh;
     font-size: 4vh;
   }
-  .robert{
+  .robert {
     font-size: 6vh;
   }
-  .item:hover{
+  .item:hover {
     text-decoration: none;
     color: #e6e6e6;
+  }
+  .project-button:hover {
+    position: relative;
+    top: 0px;
   }
 }

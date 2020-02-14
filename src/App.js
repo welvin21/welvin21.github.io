@@ -7,16 +7,15 @@ import Footer from './Components/Footer';
 import './App.css';
 
 const App = () => {
-  return(
-    <div>
-      <Header/>
-      <Home/>
-      <About/>
-      <Projects/>
-      <Footer/>
-    </div>
-
+  return (
+    <>
+      <Header />
+      <Home />
+      <About />
+      <Projects />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;

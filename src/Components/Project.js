@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
+import { Button, Collapse } from '@material-ui/core';
 import { GitHub, ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Tag, notification } from 'antd';
 import 'antd/dist/antd.css';
@@ -55,7 +55,12 @@ const Project = ({ project: { pic, title, desc, url, github, tags } }) => {
       <div>
         <img className={classes.picture} src={pic} alt={title} />
       </div>
-      <div style={{ padding: '0px 10px', display: isCollapsed ? '' : 'none' }}>
+      <Collapse
+        style={{ padding: '0px 10px' }}
+        in={isCollapsed}
+        collapsedHeight={1}
+        timeout={1000}
+      >
         <div style={{ paddingTop: 10 }}>
           {tags.map(tag => identifyTag(tag))}
         </div>
@@ -89,7 +94,7 @@ const Project = ({ project: { pic, title, desc, url, github, tags } }) => {
             Code
           </Button>
         </div>
-      </div>
+      </Collapse>
       <Button fullWidth={true} onClick={() => setCollapsed(!isCollapsed)}>
         {isCollapsed ? <ExpandLess /> : <ExpandMore />}
       </Button>

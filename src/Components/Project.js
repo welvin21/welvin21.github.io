@@ -7,7 +7,7 @@ import {
   ExpandMore,
   ExpandLess
 } from '@material-ui/icons';
-import { Tag, notification } from 'antd';
+import { Tag } from 'antd';
 import 'antd/dist/antd.css';
 
 const useStyles = makeStyles(theme => ({
@@ -41,13 +41,6 @@ const identifyTag = tag => {
   );
 };
 
-const openMessage = () => {
-  notification.error({
-    message: 'Code is not available for this project.',
-    description: 'Please kindly check my other projects!'
-  });
-};
-
 const Project = ({ project: { pic, title, desc, url, github, tags } }) => {
   const [isCollapsed, setCollapsed] = useState(false);
   const classes = useStyles();
@@ -70,20 +63,17 @@ const Project = ({ project: { pic, title, desc, url, github, tags } }) => {
         <p style={{ marginTop: 5 }}>{desc}</p>
         <div className={classes.buttons}>
           <LaunchRounded
-            style={{ fontSize: 'min(30px, 150%)' }}
+            style={{ fontSize: 'min(30px, 150%)', display: url ? '' : 'none' }}
             className="project-button"
-            onClick={() => {
-              window.open(url, '_blank', 'noopener');
-            }}
+            onClick={() => window.open(url, '_blank', 'noopener')}
           />
           <GitHub
-            style={{ fontSize: 'min(30px, 150%)' }}
-            className="project-button"
-            onClick={() => {
-              github
-                ? window.open(github, '_blank', 'noopener')
-                : openMessage();
+            style={{
+              fontSize: 'min(30px, 150%)',
+              display: github ? '' : 'none'
             }}
+            className="project-button"
+            onClick={() => window.open(github, '_blank', 'noopener')}
           />
         </div>
       </Collapse>

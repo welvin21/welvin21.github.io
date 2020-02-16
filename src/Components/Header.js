@@ -3,16 +3,16 @@ import { Icon } from 'antd';
 
 const items = [
   {
-    title: 'Home',
-    id: 'home'
-  },
-  {
     title: 'About',
     id: 'about'
   },
   {
     title: 'Projects',
     id: 'projects'
+  },
+  {
+    title: 'Experiences',
+    id: 'experiences'
   }
 ];
 

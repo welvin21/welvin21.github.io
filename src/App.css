@@ -110,7 +110,6 @@
 
 .projects-container {
   padding: min(5vw, 5vh);
-  padding-bottom: 0;
   background: linear-gradient(#333333, #4d4d4d);
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;

@@ -9,24 +9,6 @@ import sort from '../assets/images/sort.gif';
 
 const projects = [
   {
-    pic: sort,
-    title: 'SortIt',
-    desc:
-      'Sorting algorithms visualizer to make learning process easier for everyone.',
-    url: 'https://sort.welvin21.com',
-    github: 'https://github.com/welvin21/sortit',
-    tags: ['javascript', 'react', 'redux']
-  },
-  {
-    pic: digibot,
-    title: 'Digibot',
-    desc:
-      'Virtual banking assistant focusing on bot interactions to make loan application process easier. Comprises text, voice, and click-based user interactions with well-designed UI.',
-    url: 'https://rebrand.ly/chappuishalder',
-    github: null,
-    tags: ['javascript', 'react-native', 'AWS']
-  },
-  {
     pic: sls,
     title: 'Smart Laundry System',
     desc:
@@ -43,6 +25,24 @@ const projects = [
     url: 'https://www.navis-app.co',
     github: 'https://github.com/welvin21/navis',
     tags: ['javascript', 'react', 'express', 'firebase']
+  },
+  {
+    pic: sort,
+    title: 'SortIt',
+    desc:
+      'Sorting algorithms visualizer to make learning process easier for everyone.',
+    url: 'https://sort.welvin21.com',
+    github: 'https://github.com/welvin21/sortit',
+    tags: ['javascript', 'react', 'redux']
+  },
+  {
+    pic: digibot,
+    title: 'Digibot',
+    desc:
+      'Virtual banking assistant focusing on bot interactions to make loan application process easier. Comprises text, voice, and click-based user interactions with well-designed UI.',
+    url: 'https://rebrand.ly/chappuishalder',
+    github: null,
+    tags: ['javascript', 'react-native', 'AWS']
   },
   {
     pic: pa,

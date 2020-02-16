@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from './Project';
+import { Project } from './Project';
 import sls from '../assets/images/sls.png';
 import mig from '../assets/images/greenwall.png';
 import navis from '../assets/images/navis.png';
@@ -64,7 +64,7 @@ const projects = [
     tags: ['arduino']
   }
 ];
-const Projects = () => {
+export const Projects = () => {
   return (
     <div className="projects-container" id="projects">
       <h1 style={{ color: '#fff' }}>Past works</h1>
@@ -76,5 +76,3 @@ const Projects = () => {
     </div>
   );
 };
-
-export default Projects;

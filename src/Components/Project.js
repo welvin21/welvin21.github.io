@@ -41,7 +41,9 @@ const identifyTag = tag => {
   );
 };
 
-const Project = ({ project: { pic, title, desc, url, github, tags } }) => {
+export const Project = ({
+  project: { pic, title, desc, url, github, tags }
+}) => {
   const [isCollapsed, setCollapsed] = useState(false);
   const classes = useStyles();
 
@@ -83,5 +85,3 @@ const Project = ({ project: { pic, title, desc, url, github, tags } }) => {
     </div>
   );
 };
-
-export default Project;

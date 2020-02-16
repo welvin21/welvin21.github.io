@@ -110,7 +110,6 @@
 
 .projects-container {
   padding: min(5vw, 5vh);
-  padding-bottom: 0;
   background: linear-gradient(#333333, #4d4d4d);
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
@@ -154,6 +153,7 @@
   background: linear-gradient(#d9d9d9, #e6e6e6);
   padding: 30px 20px;
   font-size: max(12px, 1vw);
+  text-align: center;
 }
 /* Media Query */
 @media (max-width: 567px) {

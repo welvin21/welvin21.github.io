@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from './Project';
+import { Project } from './Project';
 import sls from '../assets/images/sls.png';
 import mig from '../assets/images/greenwall.png';
 import navis from '../assets/images/navis.png';
@@ -8,24 +8,6 @@ import pa from '../assets/images/personal-assistant.png';
 import sort from '../assets/images/sort.gif';
 
 const projects = [
-  {
-    pic: sort,
-    title: 'SortIt',
-    desc:
-      'Sorting algorithms visualizer to make learning process easier for everyone.',
-    url: 'https://sort.welvin21.com',
-    github: 'https://github.com/welvin21/sortit',
-    tags: ['javascript', 'react', 'redux']
-  },
-  {
-    pic: digibot,
-    title: 'Digibot',
-    desc:
-      'Virtual banking assistant focusing on bot interactions to make loan application process easier. Comprises text, voice, and click-based user interactions with well-designed UI.',
-    url: 'https://rebrand.ly/chappuishalder',
-    github: null,
-    tags: ['javascript', 'react-native', 'AWS']
-  },
   {
     pic: sls,
     title: 'Smart Laundry System',
@@ -43,6 +25,24 @@ const projects = [
     url: 'https://www.navis-app.co',
     github: 'https://github.com/welvin21/navis',
     tags: ['javascript', 'react', 'express', 'firebase']
+  },
+  {
+    pic: sort,
+    title: 'SortIt',
+    desc:
+      'Sorting algorithms visualizer to make learning process easier for everyone.',
+    url: 'https://sort.welvin21.com',
+    github: 'https://github.com/welvin21/sortit',
+    tags: ['javascript', 'react', 'redux']
+  },
+  {
+    pic: digibot,
+    title: 'Digibot',
+    desc:
+      'Virtual banking assistant focusing on bot interactions to make loan application process easier. Comprises text, voice, and click-based user interactions with well-designed UI.',
+    url: 'https://rebrand.ly/chappuishalder',
+    github: null,
+    tags: ['javascript', 'react-native', 'AWS']
   },
   {
     pic: pa,
@@ -64,7 +64,7 @@ const projects = [
     tags: ['arduino']
   }
 ];
-const Projects = () => {
+export const Projects = () => {
   return (
     <div className="projects-container" id="projects">
       <h1 style={{ color: '#fff' }}>Past works</h1>
@@ -76,5 +76,3 @@ const Projects = () => {
     </div>
   );
 };
-
-export default Projects;

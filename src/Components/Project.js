@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const identifyTag = tag => {
-  const languages = ['python', 'javascript', 'java', 'c++'];
+  const languages = ['python', 'javascript', 'typescript', 'java', 'c++'];
 
   let color = 'magenta';
   if (languages.includes(tag)) {

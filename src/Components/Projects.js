@@ -2,7 +2,7 @@ import React from 'react';
 import { Project } from './Project';
 import sls from '../assets/images/sls.png';
 import mig from '../assets/images/greenwall.png';
-import navis from '../assets/images/navis.png';
+import fixels from '../assets/images/fixels.gif';
 import digibot from '../assets/images/digibot.png';
 import pa from '../assets/images/personal-assistant.png';
 import sort from '../assets/images/sort.gif';
@@ -18,13 +18,13 @@ const projects = [
     tags: ['python', 'javascript', 'react', 'AWS', 'firebase', 'arduino']
   },
   {
-    pic: navis,
-    title: 'Navis',
+    pic: fixels,
+    title: 'Fixels',
     desc:
-      'A centralized system to make data communication in the credit insurance escalation process faster.',
-    url: 'https://www.navis-app.co',
-    github: 'https://github.com/welvin21/navis',
-    tags: ['javascript', 'react', 'express', 'firebase']
+      'A machine learning enabled system to generate quick, accurate, and reliable diabetic retinopathy prediction.',
+    url: null,
+    github: 'https://github.com/welvin21/fixels',
+    tags: ['typescript', 'python', 'react', 'keras', 'tensorflow']
   },
   {
     pic: sort,

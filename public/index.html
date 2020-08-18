@@ -1,37 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-155171614-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-155171614-1');
-    </script>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Hi everyone! I'm Welvin" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link
-      rel="shortcut icon"
-      href="%PUBLIC_URL%/assets/images/welvin.png"
-      type="image/png"
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Montserrat|Titillium+Web|Source+Sans+Pro|Arimo&display=swap"
-      rel="stylesheet"
-    />
-    <title>Welvin Bun</title>
+    <meta name="note" content="environment=development" />
+    <title data-react-helmet="true"></title>
+    <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="___gatsby"></div>
+    <script src="/polyfill.js" nomodule=""></script>
+    <script src="/commons.js"></script>
   </body>
 </html>

@@ -51,7 +51,7 @@
     "clean": "gatsby clean",
     "test": "echo \"There is no test for now, might write later\" && exit 0",
     "lint": "npm run format && eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
-    "deploy": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/welvin21/personal-website"
+    "deploy": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/welvin21/personal_website"
   },
   "repository": {
     "type": "git",

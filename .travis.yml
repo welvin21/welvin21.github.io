@@ -1,37 +1,21 @@
 language: node_js
 node_js:
   - 'stable'
-cache: 
- directories:
-  - node_modules
-jobs:
-  include: 
-    - stage: test
-      install: 
-        - npm install
-      script:
-        - echo "Test react-app"
-        - npm test
-    - stage: deployment
-      install: 
-        - npm install
-      script:
-        - echo "Deploy to gh-pages"
-        - npm run build
-      deploy: 
-        provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_TOKEN
-        local_dir: ./build
-        keep_history: true
-        on:
-          all_branches: true
-          condition: $TRAVIS_BRANCH =~ ^(master)$
-    - stage: test-deployment
-      script: 
-        - echo "Test deployment"
-        - curl https://welvin21.com
+cache:
+  directories:
+    - node_modules
+before_script:
+  - 'npm i -g gatsby-cli'
+  - 'npm i'
+deploy:
+  provider: script
+  script: npm run deploy
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
 notifications:
   email:
-    on_success: never
+    on_success: always
     on_failure: always

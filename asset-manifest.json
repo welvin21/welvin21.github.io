@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.ffecee40.chunk.css",
-    "main.js": "/static/js/main.861c1cb4.chunk.js",
-    "main.js.map": "/static/js/main.861c1cb4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.31e764fa.js",
-    "runtime-main.js.map": "/static/js/runtime-main.31e764fa.js.map",
-    "static/css/2.da3991fa.chunk.css": "/static/css/2.da3991fa.chunk.css",
-    "static/js/2.20ae3d9e.chunk.js": "/static/js/2.20ae3d9e.chunk.js",
-    "static/js/2.20ae3d9e.chunk.js.map": "/static/js/2.20ae3d9e.chunk.js.map",
+    "main.css": "/static/css/main.a0852e92.chunk.css",
+    "main.js": "/static/js/main.54673ae7.chunk.js",
+    "main.js.map": "/static/js/main.54673ae7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c34c0ec6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c34c0ec6.js.map",
+    "static/css/2.ab3673cb.chunk.css": "/static/css/2.ab3673cb.chunk.css",
+    "static/js/2.e662ed67.chunk.js": "/static/js/2.e662ed67.chunk.js",
+    "static/js/2.e662ed67.chunk.js.map": "/static/js/2.e662ed67.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c1ab2585fb4435807a30d41038131eba.js": "/precache-manifest.c1ab2585fb4435807a30d41038131eba.js",
+    "precache-manifest.786b342c1651eddf900989415e754e6c.js": "/precache-manifest.786b342c1651eddf900989415e754e6c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.da3991fa.chunk.css.map": "/static/css/2.da3991fa.chunk.css.map",
-    "static/css/main.ffecee40.chunk.css.map": "/static/css/main.ffecee40.chunk.css.map",
-    "static/js/2.20ae3d9e.chunk.js.LICENSE.txt": "/static/js/2.20ae3d9e.chunk.js.LICENSE.txt",
+    "static/css/2.ab3673cb.chunk.css.map": "/static/css/2.ab3673cb.chunk.css.map",
+    "static/css/main.a0852e92.chunk.css.map": "/static/css/main.a0852e92.chunk.css.map",
+    "static/js/2.e662ed67.chunk.js.LICENSE.txt": "/static/js/2.e662ed67.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/background2.0e218e77.png",
     "static/media/digibot.png": "/static/media/digibot.6ef701de.png",
     "static/media/fixels.gif": "/static/media/fixels.24bd038b.gif",
@@ -24,10 +24,10 @@
     "static/media/sort.gif": "/static/media/sort.42469ab7.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.31e764fa.js",
-    "static/css/2.da3991fa.chunk.css",
-    "static/js/2.20ae3d9e.chunk.js",
-    "static/css/main.ffecee40.chunk.css",
-    "static/js/main.861c1cb4.chunk.js"
+    "static/js/runtime-main.c34c0ec6.js",
+    "static/css/2.ab3673cb.chunk.css",
+    "static/js/2.e662ed67.chunk.js",
+    "static/css/main.a0852e92.chunk.css",
+    "static/js/main.54673ae7.chunk.js"
   ]
 }

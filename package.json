@@ -4,13 +4,13 @@
   "homepage": "https://welvin21.com",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.9.2",
+    "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
-    "antd": "^3.26.9",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.3.1",
-    "react-vertical-timeline-component": "^2.5.0"
+    "antd": "^3.26.18",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.3",
+    "react-vertical-timeline-component": "^2.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,8 +35,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "husky": "^4.2.3",
+    "gh-pages": "^2.2.0",
+    "husky": "^4.2.5",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
   },

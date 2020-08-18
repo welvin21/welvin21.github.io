@@ -47,36 +47,13 @@
   cursor: pointer;
 }
 
-/* Home */
-.home {
-  background: url('./assets/images/background1.png') no-repeat;
-  background-size: cover;
-  height: 100vh;
-  text-align: center;
-}
-
-.quote {
-  margin: auto;
-  position: absolute;
-  top: 40vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
-  color: #fff;
-}
-
-.robert {
-  font-size: 36px;
-}
-
 /* About */
 
 .about {
   height: content;
   box-sizing: border-box;
   background: linear-gradient(#1a1a1a, #333333);
-  padding: min(5vw, 5vh);
+  padding: min(8vw, 8vh) min(5vw, 5vh);
 }
 
 .content {

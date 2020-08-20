@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Flex } from '@chakra-ui/core';
+import { Box, Flex, Grid, Image } from '@chakra-ui/core';
 
 import { NavBar } from '../navbar/NavBar';
 
@@ -10,12 +10,18 @@ interface ILayoutComponentProps {
 
 const Layout: React.FC<ILayoutComponentProps> = ({ children }) => {
   return (
-    <Box backgroundColor="white" color="text.primary" minHeight="100vh">
-      <Box m="10px auto" p="0 1.0875rem 1.45rem" maxWidth="960px">
-        <Flex minHeight="80vh" direction="column" justify="center">
-          <NavBar />
+    <Box backgroundColor="white" color="text.primary">
+      <Box m="0px auto" p="0 1.0875rem" maxWidth="1000px" minHeight="100vh">
+        <Grid
+          templateColumns={['', '', '30% 70%', '30% 70%']}
+          py={[5, 5, 10, 10]}
+          gridColumnGap={10}
+        >
+          <Box borderRight={['', '', '1px solid #E8E8E8', '1px solid #E8E8E8']}>
+            <NavBar />
+          </Box>
           {children}
-        </Flex>
+        </Grid>
       </Box>
     </Box>
   );

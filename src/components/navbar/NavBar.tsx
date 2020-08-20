@@ -28,7 +28,7 @@ const PersonalInformation: React.FC = () => {
 
 const Description: React.FC = () => {
   return (
-    <Flex py={4}>
+    <Flex py={[4, 4, 2, 2]}>
       <Text>
         Former Data Science Intern{' '}
         <StyledLink href="https://societegenerale.com">

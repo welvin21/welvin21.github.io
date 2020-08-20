@@ -14,7 +14,10 @@ export const InternalLink: React.FC<InternalLinkProps> = (
     <ChakraLink
       as={GatsbyLink as any}
       {...props}
-      _hover={{ color: 'primary.300', textDecoration: 'underline' }}
+      _hover={{
+        color: props._hover ? props._hover.color : 'primary.400',
+        textDecoration: 'underline',
+      }}
     />
   );
 };

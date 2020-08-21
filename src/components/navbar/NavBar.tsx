@@ -62,7 +62,13 @@ const Menu: React.FC<{ siteMetadata: any }> = ({ siteMetadata }) => {
     <Flex direction={['row', 'row', 'column', 'column']}>
       {menu.map(({ route, text }: Route, index: number) => (
         <InternalLink key={index} to={route} py={2} pr={2} w="fit-content">
-          {location.pathname === route ? <Text as="b">{text}</Text> : text}
+          {location.pathname &&
+          (location.pathname === route ||
+            location.pathname.startsWith(`/${text.toLowerCase()}`)) ? (
+            <Text as="b">{text}</Text>
+          ) : (
+            text
+          )}
         </InternalLink>
       ))}
     </Flex>

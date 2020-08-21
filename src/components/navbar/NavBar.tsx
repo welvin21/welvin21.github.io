@@ -43,12 +43,15 @@ const Description: React.FC = () => {
         <StyledLink href="https://societegenerale.com">
           @Societe Generale
         </StyledLink>
+        . Student Ambassador{' '}
+        <StyledLink href="https://studentambassadors.microsoft.com/">
+          @Microsoft
+        </StyledLink>
         . CS '22{' '}
         <StyledLink href="https://www.hku.hk">
           @The University of Hong Kong
         </StyledLink>
-        . Incoming exchange student{' '}
-        <StyledLink href="https://utoronto.ca">@UofT</StyledLink>.
+        .
       </Text>
     </Flex>
   );

@@ -1,18 +1,52 @@
 import React from 'react';
-import { Heading, Text } from '@chakra-ui/core';
+import { Heading, Text, Box } from '@chakra-ui/core';
+import { graphql } from 'gatsby';
 
-import { Layout, SEO, Construction } from '../components';
+import { Layout, SEO, Project } from '../components';
 import { LocationContext } from '../context';
+import { IProject } from '../types';
 
-const ProjectsPage: React.FC<any> = ({ location }) => {
+const ProjectsPage: React.FC<any> = ({ data, location }) => {
+  const projects: IProject[] = data.allMdx.edges.map(
+    ({ node: { frontmatter: project } }: any) => project as IProject
+  );
+
   return (
     <LocationContext.Provider value={location}>
       <Layout>
         <SEO title="Projects" />
-        <Construction />
+        <Box>
+          <Heading size="xl" mb={[3, 3, 5, 5]}>
+            Projects
+          </Heading>
+          {projects.map((project: IProject, index) => (
+            <Project key={index} {...project} />
+          ))}
+        </Box>
       </Layout>
     </LocationContext.Provider>
   );
 };
+
+export const projectsQuery = graphql`
+  query {
+    allMdx(
+      filter: { fileAbsolutePath: { regex: "/src/projects/" } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            excerpt
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default ProjectsPage;

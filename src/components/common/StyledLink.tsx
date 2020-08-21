@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link } from '@chakra-ui/core';
+import { Link, LinkProps } from '@chakra-ui/core';
 
-export const StyledLink: React.FC<{
-  children: React.ReactNode | string;
-  href: string;
-}> = ({ children, href }) => (
+export const StyledLink: React.FC<LinkProps> = props => (
   <Link
-    href={href}
+    href={props.href}
     color="primary.400"
-    _hover={{ color: 'secondary.600' }}
+    _hover={{ color: 'secondary.500' }}
     isExternal={true}
+    {...props}
   >
-    {children}
+    {props.children}
   </Link>
 );

@@ -4,7 +4,7 @@ import { Heading, Text, Box } from '@chakra-ui/core';
 import { SEO, Layout } from '../components/';
 import { LocationContext } from '../context';
 
-const NotFoundPage: React.FC = () => (
+const NotFoundPage: React.FC<any> = ({ location }) => (
   <LocationContext.Provider value={location}>
     <Layout>
       <SEO title="404: Not found" />

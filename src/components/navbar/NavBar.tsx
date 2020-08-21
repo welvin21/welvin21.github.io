@@ -17,7 +17,9 @@ const PersonalInformation: React.FC = () => {
         src={require('../../assets/welvin.png')}
       />
       <Stack isInline p={2} px={[2, 2, 0, 0]}>
-        <Text fontSize="xl">Welvin Bun | </Text>
+        <InternalLink to="/" _hover={{}}>
+          <Text fontSize="xl">Welvin Bun</Text>
+        </InternalLink>
         <StyledLink href="https://twitter.com/welvin21">
           <Text fontSize="xl">@welvin21</Text>
         </StyledLink>
@@ -29,7 +31,7 @@ const PersonalInformation: React.FC = () => {
 const Description: React.FC = () => {
   return (
     <Flex py={[4, 4, 2, 2]}>
-      <Text>
+      <Text color="#808080">
         Former Data Science Intern{' '}
         <StyledLink href="https://societegenerale.com">
           @Societe Generale

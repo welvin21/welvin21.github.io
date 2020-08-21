@@ -16,12 +16,5 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-chakra-ui`,
     `gatsby-plugin-typescript-checker`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets`,
-      },
-    },
   ],
 };

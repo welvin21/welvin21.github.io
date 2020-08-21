@@ -18,9 +18,10 @@ const siteConfig = {
   ],
   author: {
     name: 'Welvin Bun',
+    picturePath: '/welvin.png',
     contacts: {
       email: 'welvin07@gmail.com',
-      twitter: '@welvin21',
+      twitter: 'welvin21',
       github: 'welvin21',
     },
   },

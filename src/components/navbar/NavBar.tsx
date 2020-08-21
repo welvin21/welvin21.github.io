@@ -1,27 +1,34 @@
 import React, { useContext } from 'react';
 import { Avatar, Flex, Text, Stack, Link } from '@chakra-ui/core';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import { InternalLink, StyledLink } from '../common';
-import { routes, Route } from './routes';
 import { LocationContext } from '../../context';
+import { Route } from '../../types';
 
-const PersonalInformation: React.FC = () => {
+const PersonalInformation: React.FC<{ siteMetadata: any }> = ({
+  siteMetadata,
+}) => {
+  const {
+    author: {
+      name,
+      picturePath,
+      contacts: { twitter },
+    },
+  } = siteMetadata;
+
   return (
     <Flex
       direction={['row', 'row', 'column', 'column']}
       align={['center', 'center', 'start', 'start']}
     >
-      <Avatar
-        size="lg"
-        name="Welvin Bun"
-        src={require('../../assets/welvin.png')}
-      />
+      <Avatar size="lg" name={name} src={`${picturePath}`} />
       <Stack isInline p={2} px={[2, 2, 0, 0]}>
         <InternalLink to="/" _hover={{}}>
-          <Text fontSize="xl">Welvin Bun</Text>
+          <Text fontSize="xl">{name}</Text>
         </InternalLink>
-        <StyledLink href="https://twitter.com/welvin21">
-          <Text fontSize="xl">@welvin21</Text>
+        <StyledLink href={`https://twitter.com/${twitter}`}>
+          <Text fontSize="xl">@{twitter}</Text>
         </StyledLink>
       </Stack>
     </Flex>
@@ -47,12 +54,13 @@ const Description: React.FC = () => {
   );
 };
 
-const Routes: React.FC = () => {
+const Menu: React.FC<{ siteMetadata: any }> = ({ siteMetadata }) => {
   const location = useContext(LocationContext);
+  const { menu } = siteMetadata;
 
   return (
     <Flex direction={['row', 'row', 'column', 'column']}>
-      {routes.map(({ route, text }: Route, index) => (
+      {menu.map(({ route, text }: Route, index: number) => (
         <InternalLink key={index} to={route} py={2} pr={2} w="fit-content">
           {location.pathname === route ? <Text as="b">{text}</Text> : text}
         </InternalLink>
@@ -62,11 +70,35 @@ const Routes: React.FC = () => {
 };
 
 export const NavBar: React.FC = () => {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            author {
+              name
+              picturePath
+              contacts {
+                twitter
+              }
+            }
+            menu {
+              route
+              text
+            }
+          }
+        }
+      }
+    `
+  );
+
   return (
     <Stack>
-      <PersonalInformation />
+      <PersonalInformation siteMetadata={siteMetadata} />
       <Description />
-      <Routes />
+      <Menu siteMetadata={siteMetadata} />
     </Stack>
   );
 };

@@ -1,8 +1,13 @@
+const siteConfig = require('./siteConfig');
+
 module.exports = {
   siteMetadata: {
-    title: `Welvin Bun`,
-    description: `Welvin official website.`,
-    author: `Welvin Bun <welvin07@gmail.com>`,
+    url: siteConfig.url,
+    siteUrl: siteConfig.url,
+    description: siteConfig.description,
+    title: siteConfig.title,
+    menu: siteConfig.menu,
+    author: siteConfig.author,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,12 +16,5 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-chakra-ui`,
     `gatsby-plugin-typescript-checker`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets`,
-      },
-    },
   ],
 };

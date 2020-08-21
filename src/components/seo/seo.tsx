@@ -23,7 +23,9 @@ const SEO: React.FC<ISEOComponentProps> = ({
           siteMetadata {
             title
             description
-            author
+            author {
+              name
+            }
           }
         }
       }
@@ -62,7 +64,7 @@ const SEO: React.FC<ISEOComponentProps> = ({
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.author.name,
         },
         {
           name: `twitter:title`,

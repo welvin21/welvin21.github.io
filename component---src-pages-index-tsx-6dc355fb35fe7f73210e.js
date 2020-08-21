@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{QeBL:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),r=t("qWyU"),i=t("Nhdc");n.default=function(){return c.a.createElement(i.a,null,c.a.createElement(i.b,{title:"Home"}),c.a.createElement(r.a,null,"The website is currently under maintainance"))}}}]);
-//# sourceMappingURL=component---src-pages-index-tsx-6dc355fb35fe7f73210e.js.map

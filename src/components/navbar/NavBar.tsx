@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { Avatar, Flex, Text, Stack, Link } from '@chakra-ui/core';
+import { Avatar, Flex, Text, Stack, Link, Box } from '@chakra-ui/core';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import { Footer } from '../footer';
 import { InternalLink, StyledLink } from '../common';
 import { LocationContext } from '../../context';
 import { Route } from '../../types';
@@ -27,8 +28,8 @@ const PersonalInformation: React.FC<{ siteMetadata: any }> = ({
         <InternalLink to="/" _hover={{}}>
           <Text fontSize="xl">{name}</Text>
         </InternalLink>
-        <StyledLink href={`https://twitter.com/${twitter}`}>
-          <Text fontSize="xl">@{twitter}</Text>
+        <StyledLink href={twitter.link}>
+          <Text fontSize="xl">@{twitter.name}</Text>
         </StyledLink>
       </Stack>
     </Flex>
@@ -90,7 +91,10 @@ export const NavBar: React.FC = () => {
               name
               picturePath
               contacts {
-                twitter
+                twitter {
+                  name
+                  link
+                }
               }
             }
             menu {
@@ -108,6 +112,9 @@ export const NavBar: React.FC = () => {
       <PersonalInformation siteMetadata={siteMetadata} />
       <Description />
       <Menu siteMetadata={siteMetadata} />
+      <Box display={['none', 'none', 'flex', 'flex']}>
+        <Footer />
+      </Box>
     </Stack>
   );
 };

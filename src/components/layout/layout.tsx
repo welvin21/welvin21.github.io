@@ -22,7 +22,7 @@ const Layout: React.FC<ILayoutComponentProps> = ({ children }) => {
             <NavBar />
           </Box>
           <Box backgroundColor="#E8E8E8" />
-          {children}
+          <Box mt={[5, 5, 0, 0]}>{children}</Box>
         </Grid>
       </Box>
     </Box>

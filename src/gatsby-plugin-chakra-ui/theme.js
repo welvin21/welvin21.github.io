@@ -1,6 +1,8 @@
 import { theme } from '@chakra-ui/core';
 
-const { colors } = theme;
+import { ICONS as customIcons } from '../constants';
+
+const { colors, icons } = theme;
 const { facebook, green } = colors;
 
 export default {
@@ -15,4 +17,8 @@ export default {
     },
   },
   breakpoints: ['30em', '48em', '62em', '80em'],
+  icons: {
+    ...icons,
+    ...customIcons,
+  },
 };

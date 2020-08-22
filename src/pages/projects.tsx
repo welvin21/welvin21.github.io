@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Text, Box } from '@chakra-ui/core';
+import { Heading, Text, Box, Divider } from '@chakra-ui/core';
 import { graphql } from 'gatsby';
 
 import { Layout, SEO, Project } from '../components';
@@ -16,9 +16,8 @@ const ProjectsPage: React.FC<any> = ({ data, location }) => {
       <Layout>
         <SEO title="Projects" />
         <Box>
-          <Heading size="xl" mb={[3, 3, 5, 5]}>
-            Projects
-          </Heading>
+          <Heading>Projects</Heading>
+          <Divider backgroundColor="#808080" />
           {projects.map((project: IProject, index) => (
             <Project key={index} {...project} />
           ))}

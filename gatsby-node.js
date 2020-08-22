@@ -1,7 +1,7 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const projectTemplate = require.resolve(
+  const ProjectTemplate = require.resolve(
     `./src/templates/ProjectTemplate.tsx`
   );
 
@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }) => {
       createPage({
         path,
-        component: projectTemplate,
+        component: ProjectTemplate,
         context: {},
       });
     }

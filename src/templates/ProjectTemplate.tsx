@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Flex, Heading, Text, Link, Box } from '@chakra-ui/core';
+import { Heading, Text, Box, Divider } from '@chakra-ui/core';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
@@ -23,6 +23,8 @@ const ProjectTemplate: React.FC<any> = props => {
       <Layout>
         <SEO title={title} />
         <Box>
+          <Heading>{title}</Heading>
+          <Divider backgroundColor="#808080" />
           <MDXProvider components={MDXProviderComponents()}>
             <MDXRenderer>{content}</MDXRenderer>
           </MDXProvider>

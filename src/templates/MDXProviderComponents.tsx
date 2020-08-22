@@ -26,7 +26,7 @@ export const MDXProviderComponents = (): MDXProviderComponentsProp => {
     li: props => <ListItem mb={1} {...props} />,
     img: props => <Box as="img" {...props} />,
     center: (props: { children: React.ReactNode }) => (
-      <Box textAlign="center" mb={8}>
+      <Box textAlign="center" mb={4}>
         <Text as="i" {...props} />
       </Box>
     ),

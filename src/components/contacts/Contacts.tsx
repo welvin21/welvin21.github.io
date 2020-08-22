@@ -60,7 +60,7 @@ export const Contacts: React.FC = () => {
   );
 
   return (
-    <Flex my={2}>
+    <Flex mt={2}>
       {Object.keys(contacts).map((name: string, index: number) => (
         <Contact key={index} name={name} href={contacts[name].link} />
       ))}

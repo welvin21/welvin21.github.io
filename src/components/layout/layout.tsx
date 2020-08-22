@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Flex, Grid, Image } from '@chakra-ui/core';
 
-import { NavBar } from '../navbar/NavBar';
+import { NavBar } from '../navbar/';
+import { Footer } from '../footer';
 
 interface ILayoutComponentProps {
   children: React.ReactNode;
@@ -23,6 +24,12 @@ const Layout: React.FC<ILayoutComponentProps> = ({ children }) => {
           </Box>
           <Box backgroundColor="#E8E8E8" />
           <Box mt={[5, 5, 0, 0]}>{children}</Box>
+          <Box
+            display={['flex', 'flex', 'none', 'none']}
+            borderTop="1px solid #E8E8E8"
+          >
+            <Footer />
+          </Box>
         </Grid>
       </Box>
     </Box>

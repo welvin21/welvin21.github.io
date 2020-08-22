@@ -31,7 +31,7 @@ The model was trained on [HKU GPU server](https://www.cs.hku.hk/gpu-farm/home), 
 - Model was built and trained on top of [Keras](https://keras.io/) APIs, written on [Python](https://www.python.org/), following [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) practice
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) as a RESTful API that connects both ends of the application
 
-### Other contributors
+### Other contributors (in alphabetical order)
 
-- [Fernando Julio Cendra](https://github.com/fcendra)
 - [Edward Suryajaya](https://github.com/edward210400)
+- [Fernando Julio Cendra](https://github.com/fcendra)

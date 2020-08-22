@@ -28,9 +28,9 @@ The project was built in **48 hours** during [The 2019 Smartone Hackathon](https
 - Global state management using [Redux](https://redux.js.org/)
 - [Expo three AR](https://github.com/expo/expo-three-ar) for furniture visualization
 
-### Other contributors
+### Other contributors (in alphabetical order)
 
 - [Ahsan Syed](https://github.com/ahsan8244)
-- [Uday Jain](https://github.com/uday1331)
-- [Manya Agarwal](https://github.com/manyaagarwal)
 - [Diabul Haque](https://github.com/diabhaque)
+- [Manya Agarwal](https://github.com/manyaagarwal)
+- [Uday Jain](https://github.com/uday1331)

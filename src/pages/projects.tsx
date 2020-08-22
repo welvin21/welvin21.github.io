@@ -2,7 +2,7 @@ import React from 'react';
 import { Heading, Text, Box, Divider } from '@chakra-ui/core';
 import { graphql } from 'gatsby';
 
-import { Layout, SEO, Project } from '../components';
+import { Layout, SEO, Project, StyledLink } from '../components';
 import { LocationContext } from '../context';
 import { IProject } from '../types';
 
@@ -16,8 +16,15 @@ const ProjectsPage: React.FC<any> = ({ data, location }) => {
       <Layout>
         <SEO title="Projects" />
         <Box>
-          <Heading>Projects</Heading>
+          <Text>
+            <StyledLink
+              href="/projects"
+              isExternal={false}
+              children="projects"
+            />
+          </Text>
           <Divider backgroundColor="#808080" />
+          <Heading my={4}>Projects</Heading>
           {projects.map((project: IProject, index) => (
             <Project key={index} {...project} />
           ))}

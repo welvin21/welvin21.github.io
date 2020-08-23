@@ -1,5 +1,5 @@
 export { InternalLink } from './InternalLink';
-export { Construction } from './Construction';
+export { CommingSoon } from './CommingSoon';
 export { Button } from './Button';
 export { StyledLink } from './StyledLink';
 export { PathFinder } from './PathFinder';

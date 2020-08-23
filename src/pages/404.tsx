@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading, Text, Box } from '@chakra-ui/core';
 
-import { SEO, Layout } from '../components/';
+import { SEO, Layout, StyledLink } from '../components/';
 import { LocationContext } from '../context';
 
 const NotFoundPage: React.FC<any> = ({ location }) => (
@@ -10,7 +10,11 @@ const NotFoundPage: React.FC<any> = ({ location }) => (
       <SEO title="404: Not found" />
       <Box>
         <Heading as="h2">NOT FOUND</Heading>
-        <Text>You just hit a route that doesn&#39;t exist... the sadness.</Text>
+        <Text>
+          You just hit a route that doesn&#39;t exist. Go back to{' '}
+          <StyledLink href="/" children="homepage" isExternal={false} />{' '}
+          instead?
+        </Text>
       </Box>
     </Layout>
   </LocationContext.Provider>

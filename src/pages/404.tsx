@@ -6,7 +6,7 @@ import { LocationContext } from '../context';
 
 const NotFoundPage: React.FC<any> = ({ location }) => (
   <LocationContext.Provider value={location}>
-    <Layout>
+    <Layout isPathFinderEnabled={false}>
       <SEO title="404: Not found" />
       <Box>
         <Heading as="h2">NOT FOUND</Heading>

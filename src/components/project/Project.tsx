@@ -18,10 +18,10 @@ export const Project: FunctionComponent<IProject> = ({
       <StyledLink href={path} isExternal={false}>
         <Heading size="md">{title}</Heading>
       </StyledLink>
-      <Text fontSize="md" color={`tertiary.${colorMode}`}>
+      <Text fontSize="md" color={`text.${colorMode}`}>
         {truncateText(excerpt)}
       </Text>
-      <Text fontSize="sm" color={`tertiary.${colorMode}`} my={1}>
+      <Text fontSize="sm" color={`text.${colorMode}`} my={1}>
         {date}
       </Text>
     </Box>

@@ -8,9 +8,13 @@ import { PathFinder } from '../common';
 
 interface ILayoutComponentProps {
   children: React.ReactNode;
+  isPathFinderEnabled?: boolean;
 }
 
-const Layout: React.FC<ILayoutComponentProps> = ({ children }) => {
+const Layout: React.FC<ILayoutComponentProps> = ({
+  children,
+  isPathFinderEnabled = true,
+}) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -30,7 +34,7 @@ const Layout: React.FC<ILayoutComponentProps> = ({ children }) => {
           </Box>
           <Box backgroundColor={`tertiary.${colorMode}`} />
           <Box my={[5, 5, 0, 0]}>
-            <PathFinder />
+            {isPathFinderEnabled && <PathFinder />}
             {children}
           </Box>
           <Box

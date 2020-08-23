@@ -18,7 +18,7 @@ export default {
       dark: green,
     },
     tertiary: {
-      light: '#999',
+      light: '#808080',
       dark: '#FFF',
     },
     text: {

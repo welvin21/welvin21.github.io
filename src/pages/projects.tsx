@@ -16,7 +16,6 @@ const ProjectsPage: React.FC<any> = ({ data, location }) => {
       <Layout>
         <SEO title="Projects" />
         <Box>
-          <Heading mb={4}>Projects</Heading>
           {projects.map((project: IProject, index) => (
             <Project key={index} {...project} />
           ))}

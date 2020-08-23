@@ -3,16 +3,22 @@ import { theme } from '@chakra-ui/core';
 import { ICONS as customIcons } from '../constants';
 
 const { colors, icons } = theme;
-const { facebook, green } = colors;
+const { facebook, green, purple } = colors;
 
 export default {
   ...theme,
   colors: {
     ...colors,
-    primary: facebook,
-    secondary: green,
+    primary: {
+      light: facebook,
+      dark: purple,
+    },
+    secondary: {
+      light: green,
+      dark: green,
+    },
     tertiary: {
-      light: '#B3B3B3',
+      light: '#999',
       dark: '#FFF',
     },
     text: {

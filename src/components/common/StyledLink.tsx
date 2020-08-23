@@ -1,14 +1,18 @@
 import React from 'react';
-import { Link, LinkProps } from '@chakra-ui/core';
+import { Link, LinkProps, useColorMode } from '@chakra-ui/core';
 
-export const StyledLink: React.FC<LinkProps> = props => (
-  <Link
-    href={props.href}
-    color="primary.400"
-    _hover={{ color: 'secondary.500' }}
-    isExternal={true}
-    {...props}
-  >
-    {props.children}
-  </Link>
-);
+export const StyledLink: React.FC<LinkProps> = props => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Link
+      href={props.href}
+      color={`primary.${colorMode}.400`}
+      _hover={{ color: `secondary.${colorMode}.500` }}
+      isExternal={true}
+      {...props}
+    >
+      {props.children}
+    </Link>
+  );
+};

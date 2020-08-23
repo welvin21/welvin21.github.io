@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Flex, Icon, Box } from '@chakra-ui/core';
+import { Flex, Icon, Box, useColorMode } from '@chakra-ui/core';
 
 import { StyledLink } from '../common';
 
@@ -15,11 +15,13 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = props => {
+  const { colorMode } = useColorMode();
+
   return (
     <StyledLink
       href={props.href}
       color={props.color}
-      _hover={{ color: 'primary.400' }}
+      _hover={{ color: `primary.${colorMode}.400` }}
     >
       <Box
         mx={2}

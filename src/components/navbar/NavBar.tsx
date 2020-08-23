@@ -72,7 +72,9 @@ const Menu: React.FC<{ siteMetadata: any }> = ({ siteMetadata }) => {
           {location.pathname &&
           (location.pathname === route ||
             location.pathname.startsWith(`/${text.toLowerCase()}`)) ? (
-            <Text as="b">{text}</Text>
+            <Text as="u">
+              <b>{text}</b>
+            </Text>
           ) : (
             text
           )}

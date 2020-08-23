@@ -8,7 +8,7 @@ rank: 1
 
 ### Description
 
-[Fixels](https://github.com/welvin21/fixels) is a platform to help opthalmologists in generating quick, accurate, and reliable [diabetic retinopathy](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/diabetic-retinopathy) diagnosis via retinal images. In [Fixels](https://github.com/welvin21/fixels), we train a convolutional neural network model based on thousands of labeled retinal images from [kaggle public datasets](https://www.kaggle.com/c/diabetic-retinopathy-detection) and [messidor private datasets](http://www.adcis.net/en/third-party/messidor/).
+[Fixels](https://github.com/welvin21/fixels) is a platform to help opthalmologists in generating quick, accurate, and reliable [diabetic retinopathy](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/diabetic-retinopathy) diagnosis via retinal images. In [Fixels](https://github.com/welvin21/fixels), we use a convolutional neural network model trained on thousands of labeled retinal images from [kaggle public datasets](https://www.kaggle.com/c/diabetic-retinopathy-detection) and [messidor private datasets](http://www.adcis.net/en/third-party/messidor/).
 
 The model was trained on [HKU GPU server](https://www.cs.hku.hk/gpu-farm/home), and yields an accuracy near to **80%** on validation data. Finally, We connected the core functionality of [Fixels](https://github.com/welvin21/fixels) to a web application as an interface which can be easily accessed and used by everyone.
 
@@ -22,7 +22,7 @@ The model was trained on [HKU GPU server](https://www.cs.hku.hk/gpu-farm/home), 
 
 ### Relevant Links
 
-- [Github repository](https://github.com/welvin21/fixels)
+- [GitHub repository](https://github.com/welvin21/fixels)
 - [Project paper](https://docs.google.com/document/d/1LZa8fqrnkVMQ4Fa4gENu2jrBmWHiHxfJiUicABZoceI/edit)
 - [Project presentation](https://docs.google.com/presentation/d/1CYVJtrq3uHt2-6hDp-QX7ag71pEPAqrRGTvqHc5mds8/edit#slide=id.g7fc3b92232_1_49)
 

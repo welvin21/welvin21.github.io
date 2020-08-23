@@ -19,7 +19,7 @@ The project was built in **36 hours** during [The 2019 FinTech Week Hackathon](h
 ### Relevant Links
 
 - [Website demo](https://navis-app.co/)
-- [Github repository](https://github.com/welvin21/navis)
+- [GitHub repository](https://github.com/welvin21/navis)
 
 ### Tech and tools
 

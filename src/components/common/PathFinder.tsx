@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import { Text, Stack, Divider } from '@chakra-ui/core';
+import { Text, Stack, Box, useColorMode } from '@chakra-ui/core';
 
 import { LocationContext } from '../../context';
 import { StyledLink } from './StyledLink';
 
 export const PathFinder: React.FC = () => {
+  const { colorMode } = useColorMode();
+
   const { pathname } = useContext(LocationContext);
   const trimmedPathname: string = pathname.replace(/^\/+|\/+$/g, '');
   const paths: string[] = trimmedPathname.split('/');
@@ -24,7 +26,7 @@ export const PathFinder: React.FC = () => {
             </Text>
           ))}
         </Stack>
-        <Divider backgroundColor="#808080" />
+        <Box h="0.01em" my={2} backgroundColor={`tertiary.${colorMode}`} />
       </>
     );
   } else {

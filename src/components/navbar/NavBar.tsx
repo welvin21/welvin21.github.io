@@ -1,5 +1,14 @@
 import React, { useContext } from 'react';
-import { Avatar, Flex, Text, Stack, Link, Box } from '@chakra-ui/core';
+import {
+  Avatar,
+  Flex,
+  Text,
+  Stack,
+  Link,
+  Box,
+  Button,
+  useColorMode,
+} from '@chakra-ui/core';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Footer } from '../footer';
@@ -37,9 +46,11 @@ const PersonalInformation: React.FC<{ siteMetadata: any }> = ({
 };
 
 const Description: React.FC = () => {
+  const { colorMode } = useColorMode();
+
   return (
     <Flex py={[4, 4, 2, 2]}>
-      <Text color="#808080">
+      <Text color={`tertiary.${colorMode}`}>
         Former Data Science Intern{' '}
         <StyledLink href="https://societegenerale.com">
           @Societe Generale
@@ -107,9 +118,14 @@ export const NavBar: React.FC = () => {
     `
   );
 
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Stack>
       <PersonalInformation siteMetadata={siteMetadata} />
+      <Button onClick={toggleColorMode}>
+        {colorMode === 'dark' ? 'light mode' : 'dark mode'}
+      </Button>
       <Description />
       <Menu siteMetadata={siteMetadata} />
       <Box display={['none', 'none', 'flex', 'flex']}>

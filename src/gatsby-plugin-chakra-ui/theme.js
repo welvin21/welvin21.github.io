@@ -11,9 +11,17 @@ export default {
     ...colors,
     primary: facebook,
     secondary: green,
+    tertiary: {
+      light: '#B3B3B3',
+      dark: '#FFF',
+    },
     text: {
-      primary: '#000',
-      secondary: '#fff',
+      light: '#000',
+      dark: '#FFF',
+    },
+    background: {
+      light: '#FFF',
+      dark: '#0D0D0D',
     },
   },
   breakpoints: ['30em', '48em', '62em', '80em'],

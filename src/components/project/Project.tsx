@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Box, Heading, Text, Flex } from '@chakra-ui/core';
+import { Box, Heading, Text, Flex, useColorMode } from '@chakra-ui/core';
 
 import { truncateText } from '../../utils';
 import { IProject } from '../../types';
@@ -11,15 +11,17 @@ export const Project: FunctionComponent<IProject> = ({
   excerpt,
   date,
 }) => {
+  const { colorMode } = useColorMode();
+
   return (
     <Box mb={4}>
       <StyledLink href={path} isExternal={false}>
         <Heading size="md">{title}</Heading>
       </StyledLink>
-      <Text fontSize="md" color="#808080">
+      <Text fontSize="md" color={`tertiary.${colorMode}`}>
         {truncateText(excerpt)}
       </Text>
-      <Text fontSize="sm" color="#808080" my={1}>
+      <Text fontSize="sm" color={`tertiary.${colorMode}`} my={1}>
         {date}
       </Text>
     </Box>

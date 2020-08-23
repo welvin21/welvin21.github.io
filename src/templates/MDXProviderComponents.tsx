@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  Heading,
-  Link,
-  ListItem,
-  Image,
-  Box,
-  Divider,
-} from '@chakra-ui/core';
+import { Text, Heading, Link, ListItem, Image, Box } from '@chakra-ui/core';
 import { MDXProviderComponentsProp } from '@mdx-js/react';
 
 import { StyledLink } from '../components/';

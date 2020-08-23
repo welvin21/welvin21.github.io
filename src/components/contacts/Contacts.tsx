@@ -4,16 +4,27 @@ import { Flex, Icon, Box } from '@chakra-ui/core';
 
 import { StyledLink } from '../common';
 
-const Contact: React.FC<{ href: string; name: string }> = props => {
+interface ContactsProps {
+  color: string;
+}
+
+interface ContactProps {
+  href: string;
+  name: string;
+  color: string;
+}
+
+const Contact: React.FC<ContactProps> = props => {
   return (
     <StyledLink
       href={props.href}
-      color="text.primary"
+      color={props.color}
       _hover={{ color: 'primary.400' }}
     >
       <Box
         mx={2}
-        border="1px solid #E8E8E8"
+        border="1px solid"
+        borderColor={props.color}
         w="2em"
         h="2em"
         textAlign="center"
@@ -25,7 +36,7 @@ const Contact: React.FC<{ href: string; name: string }> = props => {
   );
 };
 
-export const Contacts: React.FC = () => {
+export const Contacts: React.FC<ContactsProps> = props => {
   const {
     site: {
       siteMetadata: {
@@ -62,7 +73,12 @@ export const Contacts: React.FC = () => {
   return (
     <Flex mt={2}>
       {Object.keys(contacts).map((name: string, index: number) => (
-        <Contact key={index} name={name} href={contacts[name].link} />
+        <Contact
+          key={index}
+          name={name}
+          href={contacts[name].link}
+          color={props.color}
+        />
       ))}
     </Flex>
   );

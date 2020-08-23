@@ -1,9 +1,17 @@
 import React, { useContext } from 'react';
-import { Avatar, Flex, Text, Stack, Link, Box } from '@chakra-ui/core';
+import {
+  Avatar,
+  Flex,
+  Text,
+  Stack,
+  Link,
+  Box,
+  useColorMode,
+} from '@chakra-ui/core';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Footer } from '../footer';
-import { InternalLink, StyledLink } from '../common';
+import { InternalLink, StyledLink, ColorModeSwitch } from '../common';
 import { LocationContext } from '../../context';
 import { Route } from '../../types';
 
@@ -19,27 +27,22 @@ const PersonalInformation: React.FC<{ siteMetadata: any }> = ({
   } = siteMetadata;
 
   return (
-    <Flex
-      direction={['row', 'row', 'column', 'column']}
-      align={['center', 'center', 'start', 'start']}
-    >
+    <Flex direction={'row'} align={'center'} my={1}>
       <Avatar size="lg" name={name} src={`${picturePath}`} />
-      <Stack isInline p={2} px={[2, 2, 0, 0]}>
-        <InternalLink to="/" _hover={{}}>
-          <Text fontSize="xl">{name}</Text>
-        </InternalLink>
-        <StyledLink href={twitter.link}>
-          <Text fontSize="xl">@{twitter.name}</Text>
-        </StyledLink>
-      </Stack>
+      <Text px={2} fontSize="xl">
+        <InternalLink to="/" _hover={{}} children={name} />{' '}
+        <StyledLink href={twitter.link} children={`@${twitter.name}`} />
+      </Text>
     </Flex>
   );
 };
 
 const Description: React.FC = () => {
+  const { colorMode } = useColorMode();
+
   return (
-    <Flex py={[4, 4, 2, 2]}>
-      <Text color="#808080">
+    <Flex my={1}>
+      <Text color={`tertiary.${colorMode}`}>
         Former Data Science Intern{' '}
         <StyledLink href="https://societegenerale.com">
           @Societe Generale
@@ -63,7 +66,7 @@ const Menu: React.FC<{ siteMetadata: any }> = ({ siteMetadata }) => {
   const { menu } = siteMetadata;
 
   return (
-    <Flex direction={['row', 'row', 'column', 'column']}>
+    <Flex direction={['row', 'row', 'column', 'column']} my={1}>
       {menu.map(({ route, text }: Route, index: number) => (
         <InternalLink key={index} to={route} py={2} pr={2} w="fit-content">
           {location.pathname &&
@@ -110,6 +113,7 @@ export const NavBar: React.FC = () => {
   return (
     <Stack>
       <PersonalInformation siteMetadata={siteMetadata} />
+      <ColorModeSwitch />
       <Description />
       <Menu siteMetadata={siteMetadata} />
       <Box display={['none', 'none', 'flex', 'flex']}>

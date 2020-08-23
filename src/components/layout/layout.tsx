@@ -4,6 +4,7 @@ import { Box, Flex, Grid, Image } from '@chakra-ui/core';
 
 import { NavBar } from '../navbar/';
 import { Footer } from '../footer';
+import { PathFinder } from '../common';
 
 interface ILayoutComponentProps {
   children: React.ReactNode;
@@ -23,7 +24,10 @@ const Layout: React.FC<ILayoutComponentProps> = ({ children }) => {
             <NavBar />
           </Box>
           <Box backgroundColor="#E8E8E8" />
-          <Box mt={[5, 5, 0, 0]}>{children}</Box>
+          <Box my={[5, 5, 0, 0]}>
+            <PathFinder />
+            {children}
+          </Box>
           <Box
             display={['flex', 'flex', 'none', 'none']}
             borderTop="1px solid #E8E8E8"

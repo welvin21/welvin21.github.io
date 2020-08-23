@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Heading, Text, Box, Divider } from '@chakra-ui/core';
+import { Heading, Box } from '@chakra-ui/core';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Layout, SEO, StyledLink } from '../components';
+import { Layout, SEO } from '../components';
 import { MDXProviderComponents } from './MDXProviderComponents';
 import { LocationContext } from '../context';
 
@@ -23,21 +23,7 @@ const ProjectTemplate: React.FC<any> = props => {
       <Layout>
         <SEO title={title} />
         <Box>
-          <Text>
-            <StyledLink
-              href="/projects"
-              isExternal={false}
-              children="projects"
-            />{' '}
-            >{' '}
-            <StyledLink
-              href={path}
-              isExternal={false}
-              children={title.toLowerCase()}
-            />
-          </Text>
-          <Divider backgroundColor="#808080" />
-          <Heading my={4}>{title}</Heading>
+          <Heading mb={4}>{title}</Heading>
           <MDXProvider components={MDXProviderComponents()}>
             <MDXRenderer>{content}</MDXRenderer>
           </MDXProvider>

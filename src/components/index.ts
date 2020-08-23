@@ -7,6 +7,7 @@ export {
   StyledLink,
   Construction,
   PathFinder,
+  ColorModeSwitch,
 } from './common';
 export { Project } from './project';
 export { Footer } from './footer';

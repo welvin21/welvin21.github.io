@@ -3,6 +3,7 @@ path: '/projects/navis'
 date: '2019-11-04'
 title: 'Navis'
 excerpt: 'A cloud solution to ease the data communication pipeline between parties involved in the credit insurance industry.'
+rank: 4
 ---
 
 ### Description
@@ -18,7 +19,7 @@ The project was built in **36 hours** during [The 2019 FinTech Week Hackathon](h
 ### Relevant Links
 
 - [Website demo](https://navis-app.co/)
-- [Github repository](https://github.com/welvin21/navis)
+- [GitHub repository](https://github.com/welvin21/navis)
 
 ### Tech and tools
 

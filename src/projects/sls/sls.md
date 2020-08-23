@@ -3,11 +3,14 @@ path: '/projects/sls'
 date: '2019-06-04'
 title: 'SLS'
 excerpt: 'A washing machines tracker for R.C. Lee hall residents.'
+rank: 3
 ---
 
 ### Description
 
-[SLS](https://sls.rctech.club) is an IoT project by [RC Tech Club](https://www.rctech.club/) which gives information regarding washing machines status for R.C. Lee hall residents. Since all washing machines in the building are located on the 16<sup>th</sup> floor, often times during peak hours, people had to go back and forth to check if any of the machines is not occupied by someone else. Using [SLS](https://sls.rctech.club), residents need not to worry anymore since the status of all washing machines can be tracked via the internet.
+[SLS](https://sls.rctech.club) is an IoT project by [RC Tech Club](https://www.rctech.club/) which gives information regarding washing machines status for R.C. Lee hall residents.
+
+All washing machines in the R.C. Lee hall building are located on the 16<sup>th</sup> floor, in which they were put far away from where all the residents are on (from 4<sup>th</sup> to 15<sup>th</sup> floor). Often times during peak hours, people had to go back and forth to check if any of the machines is available. Using [SLS](https://sls.rctech.club), residents need not to worry anymore since the status of all washing machines can be tracked via the internet.
 
 ![SLS website](./sls-website.png)
 
@@ -20,7 +23,7 @@ excerpt: 'A washing machines tracker for R.C. Lee hall residents.'
 ### Relevant Links
 
 - [Website](https://sls.rctech.club)
-- [Github repository](https://github.com/rcltech/sls)
+- [GitHub repository](https://github.com/rcltech/sls)
 
 ### Tech and tools
 

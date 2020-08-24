@@ -24,7 +24,11 @@ export const PathFinder: React.FC = () => {
             <Box key={index} as="span">
               <StyledLink
                 key={index}
-                href={`/${path}`}
+                href={`/${paths
+                  .slice(0, index + 1)
+                  .reduce(
+                    (path1: string, path2: string) => `${path1}/${path2}`
+                  )}`}
                 isExternal={false}
                 children={path}
               />

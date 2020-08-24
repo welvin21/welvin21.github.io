@@ -40,6 +40,13 @@ export const blogPostsQuery = graphql`
             excerpt
             date(formatString: "MMMM DD, YYYY")
             tags
+            image {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }

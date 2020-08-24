@@ -8,7 +8,7 @@ const Tag: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 export const Tags: React.FC<{ tags: string[] }> = ({ tags }) => {
-  return (
+  return tags.length ? (
     <Flex my={2} wrap="wrap" align="center" style={{ rowGap: 10 }}>
       <Text as="b" fontSize="md">
         Tags:{' '}
@@ -22,5 +22,7 @@ export const Tags: React.FC<{ tags: string[] }> = ({ tags }) => {
         />
       ))}
     </Flex>
+  ) : (
+    <></>
   );
 };

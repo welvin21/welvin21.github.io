@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Box, Heading, Text, Flex, useColorMode } from '@chakra-ui/core';
+import { Box, Heading, Text, Grid, Image, useColorMode } from '@chakra-ui/core';
 
 import { truncateText } from '../../utils';
 import { IBlogPost } from '../../types';
@@ -11,20 +11,33 @@ export const BlogPost: FunctionComponent<IBlogPost> = ({
   excerpt,
   date,
   tags,
+  image,
 }) => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box mb={4}>
+    <Grid
+      mb={4}
+      templateColumns={['', '1fr 3fr', '1fr 3fr', '1fr 3fr']}
+      gap={2}
+      alignItems="center"
+    >
       <StyledLink href={path} isExternal={false}>
-        <Heading size="md">{title}</Heading>
+        <Box>
+          <Image src={image.childImageSharp.fluid.src} />
+        </Box>
       </StyledLink>
-      <Text fontSize="md" color={`text.${colorMode}`}>
-        {truncateText({ text: excerpt, limit: 250 })}
-      </Text>
-      <Text fontSize="sm" as="b" color={`text.${colorMode}`} my={1}>
-        {date.toUpperCase()} | {tags[0].toUpperCase()}
-      </Text>
-    </Box>
+      <Box>
+        <StyledLink href={path} isExternal={false}>
+          <Heading size="md">{title}</Heading>
+          <Text fontSize="md" color={`text.${colorMode}`}>
+            {truncateText({ text: excerpt, limit: 200 })}
+          </Text>
+        </StyledLink>
+        <Text fontSize="sm" as="b" color={`text.${colorMode}`} my={1}>
+          {date.toUpperCase()} | {tags[0].toUpperCase()}
+        </Text>
+      </Box>
+    </Grid>
   );
 };

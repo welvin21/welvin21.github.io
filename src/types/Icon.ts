@@ -1,6 +1,6 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
 export interface Icon {
-  path: React.ReactNode;
+  path: ReactNode;
   viewBox: string;
 }

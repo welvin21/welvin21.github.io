@@ -8,6 +8,8 @@ export {
   ComingSoon,
   PathFinder,
   ColorModeSwitch,
+  Tags,
 } from './common';
 export { Project } from './project';
+export { BlogPost } from './blog-post';
 export { Footer } from './footer';

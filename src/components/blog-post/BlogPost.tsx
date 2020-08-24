@@ -2,14 +2,15 @@ import React, { FunctionComponent } from 'react';
 import { Box, Heading, Text, Flex, useColorMode } from '@chakra-ui/core';
 
 import { truncateText } from '../../utils';
-import { IProject } from '../../types';
+import { IBlogPost } from '../../types';
 import { InternalLink, StyledLink } from '../common/';
 
-export const Project: FunctionComponent<IProject> = ({
+export const BlogPost: FunctionComponent<IBlogPost> = ({
   path,
   title,
   excerpt,
   date,
+  tags,
 }) => {
   const { colorMode } = useColorMode();
 
@@ -19,10 +20,10 @@ export const Project: FunctionComponent<IProject> = ({
         <Heading size="md">{title}</Heading>
       </StyledLink>
       <Text fontSize="md" color={`text.${colorMode}`}>
-        {truncateText({ text: excerpt })}
+        {truncateText({ text: excerpt, limit: 250 })}
       </Text>
       <Text fontSize="sm" as="b" color={`text.${colorMode}`} my={1}>
-        {date.toUpperCase()}
+        {date.toUpperCase()} | {tags[0].toUpperCase()}
       </Text>
     </Box>
   );

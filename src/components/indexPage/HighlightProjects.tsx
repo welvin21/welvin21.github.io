@@ -38,7 +38,7 @@ export const HighlightProjects: React.FC = () => {
   );
 
   return (
-    <Box mt={2} mb={10} ml={4}>
+    <Box mt={2} mb={10} ml={2}>
       {projects.map((project: IProject, index) => (
         <Project key={index} {...project} />
       ))}

@@ -2,7 +2,7 @@
 path: '/blog/introduction-to-artificial-neural-network'
 date: '2020-08-24'
 title: 'Introduction to Artificial Neural Network'
-excerpt: 'What is exactly a Neural Network?'
+excerpt: 'Artificial neural networks, usually simply called neural networks, are computing systems vaguely inspired by the biological neural networks that constitute animal brains. An ANN is based on a collection of connected units or nodes called artificial neurons, which loosely model the neurons in a biological brain.'
 tags: ['Machine Learning', 'Neural Network']
 ---
 

@@ -37,6 +37,7 @@ module.exports = {
         short_name: siteConfig.title,
         start_url: `/`,
         icon: `src/images/welvin.png`,
+        background_color: `#0D0D0D`,
       },
     },
     {

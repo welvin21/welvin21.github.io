@@ -19,7 +19,7 @@ export const Project: FunctionComponent<IProject> = ({
         <Heading size="md">{title}</Heading>
       </StyledLink>
       <Text fontSize="md" color={`text.${colorMode}`}>
-        {truncateText(excerpt)}
+        {truncateText({ text: excerpt })}
       </Text>
       <Text fontSize="sm" color={`text.${colorMode}`} my={1}>
         {date}

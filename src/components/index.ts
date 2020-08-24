@@ -5,7 +5,7 @@ export {
   InternalLink,
   Button,
   StyledLink,
-  CommingSoon,
+  ComingSoon,
   PathFinder,
   ColorModeSwitch,
 } from './common';

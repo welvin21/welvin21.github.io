@@ -2,6 +2,7 @@ const siteConfig = {
   url: 'https://welvin21.com',
   title: 'welvin21.com',
   description: "Welvin's official website.",
+  lastUpdated: '24 August 2020',
   menu: [
     {
       text: 'About',

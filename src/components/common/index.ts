@@ -1,5 +1,5 @@
 export { InternalLink } from './InternalLink';
-export { CommingSoon } from './CommingSoon';
+export { ComingSoon } from './ComingSoon';
 export { Button } from './Button';
 export { StyledLink } from './StyledLink';
 export { PathFinder } from './PathFinder';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading, Text } from '@chakra-ui/core';
 
-import { Layout, SEO, CommingSoon } from '../components';
+import { Layout, SEO, ComingSoon } from '../components';
 import { LocationContext } from '../context';
 
 const BlogPage: React.FC<any> = ({ location }) => {
@@ -9,7 +9,7 @@ const BlogPage: React.FC<any> = ({ location }) => {
     <LocationContext.Provider value={location}>
       <Layout>
         <SEO title="Blog" />
-        <CommingSoon />
+        <ComingSoon />
       </Layout>
     </LocationContext.Provider>
   );

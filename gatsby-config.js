@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: siteConfig.url,
     description: siteConfig.description,
     title: siteConfig.title,
+    lastUpdated: siteConfig.lastUpdated,
     menu: siteConfig.menu,
     author: siteConfig.author,
   },

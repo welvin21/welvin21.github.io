@@ -12,9 +12,11 @@ export const HighlightProjects: React.FC = () => {
     graphql`
       query {
         allMdx(
-          filter: { fileAbsolutePath: { regex: "/src/projects/" } }
-          sort: { order: ASC, fields: [frontmatter___rank] }
-          limit: 3
+          filter: {
+            fileAbsolutePath: { regex: "/src/projects/" }
+            frontmatter: { title: { in: ["Sort It", "Fixels", "SLS"] } }
+          }
+          sort: { order: DESC, fields: [frontmatter___date] }
         ) {
           edges {
             node {

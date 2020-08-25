@@ -13,3 +13,4 @@ export {
 export { Project } from './project';
 export { BlogPost } from './blog-post';
 export { Footer } from './footer';
+export { NavBar, PersonalInformation, Description } from './navbar';

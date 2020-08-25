@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { Heading, Box, Text, Stack, useColorMode } from '@chakra-ui/core';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 
 import {
   SEO,
@@ -15,6 +16,8 @@ import {
 } from '../components';
 import { MDXProviderComponents } from './MDXProviderComponents';
 import { LocationContext } from '../context';
+
+deckDeckGoHighlightElement();
 
 const BlogPostTemplate: React.FC<any> = props => {
   const { data, location } = props;
@@ -35,7 +38,7 @@ const BlogPostTemplate: React.FC<any> = props => {
         backgroundColor={`background.${colorMode}`}
         color={`text.${colorMode}`}
       >
-        <Box m="0px auto" p="1.0875rem" maxWidth="750px" minHeight="100vh">
+        <Box m="0px auto" p="1.0875rem" maxWidth="800px" minHeight="100vh">
           <Stack>
             <PersonalInformation siteMetadata={siteMetadata} />
             <Description />

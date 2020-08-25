@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  Heading,
-  Link,
-  ListItem,
-  Image,
-  Box,
-  Code,
-} from '@chakra-ui/core';
+import { Text, Heading, Link, ListItem, Image, Box } from '@chakra-ui/core';
 import { MDXProviderComponentsProp } from '@mdx-js/react';
 
 import { StyledLink } from '../components/';
@@ -29,16 +21,6 @@ export const MDXProviderComponents = (): MDXProviderComponentsProp => {
       <Box textAlign="center" mb={4}>
         <Text as="i" {...props} />
       </Box>
-    ),
-    code: props => (
-      <Code
-        mb={4}
-        w="100%"
-        p={2}
-        borderRadius="md"
-        style={{ overflowX: 'scroll' }}
-        {...props}
-      />
     ),
   };
 };

@@ -5,7 +5,7 @@ title: 'Sort It'
 excerpt: 'A sorting algorithm visualizer to make learning process easier for everyone.'
 ---
 
-### Description
+##### Description
 
 [SortIt](https://sort.welvin21.com) is a sorting algorithms visualizer that is running on the web. There are 10 different sorting algorithms available on [SortIt](https://sort.welvin21.com). Some of them are Bubble Sort, Insertion Sort, Merge Sort, Quick Sort, and Heap Sort.
 
@@ -15,12 +15,12 @@ excerpt: 'A sorting algorithm visualizer to make learning process easier for eve
 
 <center>Figure 1: SortIt website</center>
 
-### Relevant Links
+##### Relevant Links
 
 - [Website](https://sort.welvin21.com)
 - [GitHub repository](https://github.com/welvin21/sortit)
 
-### Tech and tools
+##### Tech and tools
 
 - Frontend using [React](https://reactjs.org/), written on JavaScript
 - Global state management using [Redux](https://redux.js.org/)

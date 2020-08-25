@@ -5,7 +5,7 @@ title: 'Navis'
 excerpt: 'A cloud solution to ease the data communication pipeline between parties involved in the credit insurance industry.'
 ---
 
-### Description
+##### Description
 
 [Navis](https://github.com/welvin21/navis) is a cloud platform that helps all parties related to credit insurance process in keeping and structuring their documents. It was built to tackle specific challenge addressed by [HKECIC](http://www.hkecic.com/) which was inefficient and time-consuming documents transfer process between parties.
 
@@ -15,18 +15,18 @@ The project was built in **36 hours** during [The 2019 FinTech Week Hackathon](h
 
 <center>Figure 1: Navis dashboard</center>
 
-### Relevant Links
+##### Relevant Links
 
 - [Website demo](https://navis-app.co/)
 - [GitHub repository](https://github.com/welvin21/navis)
 
-### Tech and tools
+##### Tech and tools
 
 - Frontend using [React](https://reactjs.org/), written on JavaScript
 - [Google Firebase](https://firebase.google.com/) as serverless database and storage
 - NodeJS web server built using [ExpressJS](https://expressjs.com/), written on JavaScript
 
-### Other contributors (in alphabetical order)
+##### Other contributors (in alphabetical order)
 
 - [Adrio Alimin](https://github.com/lyulka)
 - [Ahsan Syed](https://github.com/ahsan8244)

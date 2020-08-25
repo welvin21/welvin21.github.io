@@ -45,7 +45,10 @@ const BlogPostTemplate: React.FC<any> = props => {
             <ColorModeSwitch />
           </Stack>
           <PathFinder />
-          <Heading mb={4}>{title}</Heading>
+          <Box mb={4}>
+            <Heading>{title}</Heading>
+            <Text as="b">{date.toUpperCase()}</Text>
+          </Box>
           <MDXProvider components={MDXProviderComponents()}>
             <MDXRenderer>{content}</MDXRenderer>
           </MDXProvider>

@@ -1,2 +1,2 @@
-export { siteMetadataQuery } from './SiteMetadataQuery';
+export { siteMetadataFragment } from './SiteMetadataFragment';
 export { mdxFragment } from './MdxFragment';

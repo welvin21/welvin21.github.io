@@ -16,7 +16,7 @@ import {
 } from '../components';
 import { MDXProviderComponents } from './MDXProviderComponents';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery, mdxFragment } from '../graphql';
+import { siteMetadataFragment, mdxFragment } from '../graphql';
 
 deckDeckGoHighlightElement();
 

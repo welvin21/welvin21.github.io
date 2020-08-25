@@ -9,7 +9,7 @@ import {
   AboutWebsite,
 } from '../components/indexPage';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery } from '../graphql';
+import { siteMetadataFragment } from '../graphql';
 
 const IndexPage: React.FC<any> = ({ data, location }) => {
   const {

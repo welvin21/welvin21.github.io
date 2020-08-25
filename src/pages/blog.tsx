@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 import { Layout, SEO, BlogPost } from '../components';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery, mdxFragment } from '../graphql';
+import { siteMetadataFragment, mdxFragment } from '../graphql';
 import { IBlogPost } from '../types';
 
 const BlogPage: React.FC<any> = ({ data, location }) => {

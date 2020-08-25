@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 import { Layout, SEO, Project } from '../components';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery, mdxFragment } from '../graphql';
+import { siteMetadataFragment, mdxFragment } from '../graphql';
 import { IProject } from '../types';
 
 const ProjectsPage: React.FC<any> = ({ data, location }) => {

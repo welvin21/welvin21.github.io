@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 import { SEO, Layout, StyledLink } from '../components/';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery } from '../graphql';
+import { siteMetadataFragment } from '../graphql';
 
 const NotFoundPage: React.FC<any> = ({ data, location }) => (
   <LocationContext.Provider value={location}>

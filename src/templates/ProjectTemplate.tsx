@@ -7,7 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Layout, SEO } from '../components';
 import { MDXProviderComponents } from './MDXProviderComponents';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery, mdxFragment } from '../graphql';
+import { siteMetadataFragment, mdxFragment } from '../graphql';
 
 const ProjectTemplate: React.FC<any> = props => {
   const { data, location } = props;

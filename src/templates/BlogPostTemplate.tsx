@@ -15,12 +15,12 @@ import {
   Footer,
 } from '../components';
 import { MDXProviderComponents } from './MDXProviderComponents';
-import { LocationContext } from '../context';
+import { LocationContext, SiteMetadataContext } from '../context';
+import { siteMetadataFragment, mdxFragment } from '../graphql';
 
 deckDeckGoHighlightElement();
 
-const BlogPostTemplate: React.FC<any> = props => {
-  const { data, location } = props;
+const BlogPostTemplate: React.FC<any> = ({ data, location }) => {
   const { colorMode } = useColorMode();
 
   const {
@@ -33,29 +33,31 @@ const BlogPostTemplate: React.FC<any> = props => {
 
   return (
     <LocationContext.Provider value={location}>
-      <SEO title={title} />
-      <Box
-        backgroundColor={`background.${colorMode}`}
-        color={`text.${colorMode}`}
-      >
-        <Box m="0px auto" p="1.0875rem" maxWidth="800px" minHeight="100vh">
-          <Stack>
-            <PersonalInformation siteMetadata={siteMetadata} />
-            <Description />
-            <ColorModeSwitch />
-          </Stack>
-          <PathFinder />
-          <Box mb={4}>
-            <Heading>{title}</Heading>
-            <Text as="b">{date.toUpperCase()}</Text>
+      <SiteMetadataContext.Provider value={siteMetadata}>
+        <SEO title={title} />
+        <Box
+          backgroundColor={`background.${colorMode}`}
+          color={`text.${colorMode}`}
+        >
+          <Box m="0px auto" p="1.0875rem" maxWidth="800px" minHeight="100vh">
+            <Stack>
+              <PersonalInformation />
+              <Description />
+              <ColorModeSwitch />
+            </Stack>
+            <PathFinder />
+            <Box mb={4}>
+              <Heading>{title}</Heading>
+              <Text as="b">{date.toUpperCase()}</Text>
+            </Box>
+            <MDXProvider components={MDXProviderComponents()}>
+              <MDXRenderer>{content}</MDXRenderer>
+            </MDXProvider>
+            <Tags tags={tags} />
+            <Footer />
           </Box>
-          <MDXProvider components={MDXProviderComponents()}>
-            <MDXRenderer>{content}</MDXRenderer>
-          </MDXProvider>
-          <Tags tags={tags} />
-          <Footer />
         </Box>
-      </Box>
+      </SiteMetadataContext.Provider>
     </LocationContext.Provider>
   );
 };
@@ -63,27 +65,13 @@ const BlogPostTemplate: React.FC<any> = props => {
 export const blogPostsQuery = graphql`
   query($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
-      body
+      ...MdxFragment
       frontmatter {
-        path
-        title
-        date(formatString: "MMMM DD, YYYY")
         tags
       }
     }
     site {
-      siteMetadata {
-        author {
-          name
-          picturePath
-          contacts {
-            twitter {
-              name
-              link
-            }
-          }
-        }
-      }
+      ...SiteMetadata
     }
   }
 `;

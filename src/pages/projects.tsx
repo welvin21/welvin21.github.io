@@ -3,29 +3,36 @@ import { Heading, Box } from '@chakra-ui/core';
 import { graphql } from 'gatsby';
 
 import { Layout, SEO, Project } from '../components';
-import { LocationContext } from '../context';
+import { LocationContext, SiteMetadataContext } from '../context';
+import { siteMetadataFragment, mdxFragment } from '../graphql';
 import { IProject } from '../types';
 
 const ProjectsPage: React.FC<any> = ({ data, location }) => {
-  const projects: IProject[] = data.allMdx.edges.map(
+  const {
+    allMdx: { edges },
+    site: { siteMetadata },
+  } = data;
+  const projects: IProject[] = edges.map(
     ({ node: { frontmatter: project } }: any) => project as IProject
   );
 
   return (
     <LocationContext.Provider value={location}>
-      <Layout>
-        <SEO title="Projects" />
-        <Box>
-          {projects.map((project: IProject, index) => (
-            <Project key={index} {...project} />
-          ))}
-        </Box>
-      </Layout>
+      <SiteMetadataContext.Provider value={siteMetadata}>
+        <Layout>
+          <SEO title="Projects" />
+          <Box>
+            {projects.map((project: IProject, index) => (
+              <Project key={index} {...project} />
+            ))}
+          </Box>
+        </Layout>
+      </SiteMetadataContext.Provider>
     </LocationContext.Provider>
   );
 };
 
-export const projectsQuery = graphql`
+export const projectsPageQuery = graphql`
   query {
     allMdx(
       filter: { fileAbsolutePath: { regex: "/src/projects/" } }
@@ -34,14 +41,12 @@ export const projectsQuery = graphql`
     ) {
       edges {
         node {
-          frontmatter {
-            path
-            title
-            excerpt
-            date(formatString: "MMMM DD, YYYY")
-          }
+          ...MdxFragment
         }
       }
+    }
+    site {
+      ...SiteMetadata
     }
   }
 `;

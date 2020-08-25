@@ -1,23 +1,11 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { useContext } from 'react';
 import { Text, Flex, useColorMode } from '@chakra-ui/core';
 
 import { Contacts } from '../contacts';
+import { SiteMetadataContext } from '../../context';
 
 export const Footer: React.FC = () => {
-  const {
-    site: {
-      siteMetadata: { lastUpdated },
-    },
-  } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          lastUpdated
-        }
-      }
-    }
-  `);
+  const { lastUpdated } = useContext(SiteMetadataContext);
   const { colorMode } = useColorMode();
   const footerColor =
     colorMode === 'dark' ? `text.${colorMode}` : `tertiary.${colorMode}`;

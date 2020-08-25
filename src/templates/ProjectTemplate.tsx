@@ -6,7 +6,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { Layout, SEO } from '../components';
 import { MDXProviderComponents } from './MDXProviderComponents';
-import { LocationContext } from '../context';
+import { LocationContext, SiteMetadataContext } from '../context';
+import { siteMetadataFragment, mdxFragment } from '../graphql';
 
 const ProjectTemplate: React.FC<any> = props => {
   const { data, location } = props;
@@ -16,19 +17,22 @@ const ProjectTemplate: React.FC<any> = props => {
       frontmatter: { title, date, path },
       body: content,
     },
+    site: { siteMetadata },
   } = data;
 
   return (
     <LocationContext.Provider value={location}>
-      <Layout>
-        <SEO title={title} />
-        <Box>
-          <Heading mb={4}>{title}</Heading>
-          <MDXProvider components={MDXProviderComponents()}>
-            <MDXRenderer>{content}</MDXRenderer>
-          </MDXProvider>
-        </Box>
-      </Layout>
+      <SiteMetadataContext.Provider value={siteMetadata}>
+        <Layout>
+          <SEO title={title} />
+          <Box>
+            <Heading mb={4}>{title}</Heading>
+            <MDXProvider components={MDXProviderComponents()}>
+              <MDXRenderer>{content}</MDXRenderer>
+            </MDXProvider>
+          </Box>
+        </Layout>
+      </SiteMetadataContext.Provider>
     </LocationContext.Provider>
   );
 };
@@ -36,12 +40,10 @@ const ProjectTemplate: React.FC<any> = props => {
 export const projectsQuery = graphql`
   query($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
-      body
-      frontmatter {
-        path
-        title
-        date(formatString: "MMMM DD, YYYY")
-      }
+      ...MdxFragment
+    }
+    site {
+      ...SiteMetadata
     }
   }
 `;

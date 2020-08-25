@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { useContext } from 'react';
 import { Flex, Icon, Box, useColorMode } from '@chakra-ui/core';
 
 import { StyledLink } from '../common';
+import { SiteMetadataContext } from '../../context';
 
 interface ContactsProps {
   color: string;
@@ -40,37 +40,8 @@ const Contact: React.FC<ContactProps> = props => {
 
 export const Contacts: React.FC<ContactsProps> = props => {
   const {
-    site: {
-      siteMetadata: {
-        author: { contacts },
-      },
-    },
-  } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            author {
-              contacts {
-                twitter {
-                  link
-                }
-                email {
-                  link
-                }
-                github {
-                  link
-                }
-                linkedin {
-                  link
-                }
-              }
-            }
-          }
-        }
-      }
-    `
-  );
+    author: { contacts },
+  } = useContext(SiteMetadataContext);
 
   return (
     <Flex mt={2}>

@@ -5,7 +5,7 @@ title: 'SLS'
 excerpt: 'A washing machines tracker for R.C. Lee hall residents.'
 ---
 
-### Description
+##### Description
 
 [SLS](https://sls.rctech.club) is an IoT project by [RC Tech Club](https://www.rctech.club/) which gives information regarding washing machines status for R.C. Lee hall residents.
 
@@ -19,17 +19,17 @@ All washing machines in the R.C. Lee hall building are located on the 16<sup>th<
 
 <center>Figure 2: SLS promotion poster</center>
 
-### Relevant Links
+##### Relevant Links
 
 - [Website](https://sls.rctech.club)
 - [GitHub repository](https://github.com/rcltech/sls)
 
-### Tech and tools
+##### Tech and tools
 
 - Frontend using [React](https://reactjs.org/), written on JavaScript
 - [AWS Lambda](https://aws.amazon.com/lambda/) as a serverless hook to send requests to [Phoenix](https://github.com/rcltech/phoenix) (RC Tech Data API server)
 
-### Other contributors (in alphabetical order)
+##### Other contributors (in alphabetical order)
 
 - Angela Park
 - [Sean Chok](https://github.com/98sean98)

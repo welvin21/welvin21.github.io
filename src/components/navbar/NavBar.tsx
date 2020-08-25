@@ -15,7 +15,7 @@ import { InternalLink, StyledLink, ColorModeSwitch } from '../common';
 import { LocationContext } from '../../context';
 import { Route } from '../../types';
 
-const PersonalInformation: React.FC<{ siteMetadata: any }> = ({
+export const PersonalInformation: React.FC<{ siteMetadata: any }> = ({
   siteMetadata,
 }) => {
   const {
@@ -37,7 +37,7 @@ const PersonalInformation: React.FC<{ siteMetadata: any }> = ({
   );
 };
 
-const Description: React.FC = () => {
+export const Description: React.FC = () => {
   const { colorMode } = useColorMode();
 
   return (

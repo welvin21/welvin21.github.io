@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 import { Layout, SEO, BlogPost } from '../components';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery } from '../graphql';
+import { siteMetadataQuery, mdxFragment } from '../graphql';
 import { IBlogPost } from '../types';
 
 const BlogPage: React.FC<any> = ({ data, location }) => {
@@ -41,11 +41,8 @@ export const blogPageQuery = graphql`
     ) {
       edges {
         node {
+          ...MdxFragment
           frontmatter {
-            path
-            title
-            excerpt
-            date(formatString: "MMMM DD, YYYY")
             tags
           }
         }

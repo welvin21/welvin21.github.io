@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 import { Layout, SEO, Project } from '../components';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery } from '../graphql';
+import { siteMetadataQuery, mdxFragment } from '../graphql';
 import { IProject } from '../types';
 
 const ProjectsPage: React.FC<any> = ({ data, location }) => {
@@ -41,12 +41,7 @@ export const projectsPageQuery = graphql`
     ) {
       edges {
         node {
-          frontmatter {
-            path
-            title
-            excerpt
-            date(formatString: "MMMM DD, YYYY")
-          }
+          ...MdxFragment
         }
       }
     }

@@ -16,7 +16,7 @@ import {
 } from '../components';
 import { MDXProviderComponents } from './MDXProviderComponents';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery } from '../graphql';
+import { siteMetadataQuery, mdxFragment } from '../graphql';
 
 deckDeckGoHighlightElement();
 
@@ -65,11 +65,8 @@ const BlogPostTemplate: React.FC<any> = ({ data, location }) => {
 export const blogPostsQuery = graphql`
   query($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
-      body
+      ...MdxFragment
       frontmatter {
-        path
-        title
-        date(formatString: "MMMM DD, YYYY")
         tags
       }
     }

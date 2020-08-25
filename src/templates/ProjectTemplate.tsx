@@ -7,7 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Layout, SEO } from '../components';
 import { MDXProviderComponents } from './MDXProviderComponents';
 import { LocationContext, SiteMetadataContext } from '../context';
-import { siteMetadataQuery } from '../graphql';
+import { siteMetadataQuery, mdxFragment } from '../graphql';
 
 const ProjectTemplate: React.FC<any> = props => {
   const { data, location } = props;
@@ -40,12 +40,7 @@ const ProjectTemplate: React.FC<any> = props => {
 export const projectsQuery = graphql`
   query($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
-      body
-      frontmatter {
-        path
-        title
-        date(formatString: "MMMM DD, YYYY")
-      }
+      ...MdxFragment
     }
     site {
       ...SiteMetadata

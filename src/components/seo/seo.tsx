@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+
+import { SiteMetadataContext } from '../../context';
 
 interface ISEOComponentProps {
   description?: string;
@@ -16,23 +18,9 @@ const SEO: React.FC<ISEOComponentProps> = ({
   meta = [],
   title,
 }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author {
-              name
-            }
-          }
-        }
-      }
-    `
-  );
+  const siteMetadata = useContext(SiteMetadataContext);
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || siteMetadata.description;
 
   return (
     <Helmet
@@ -40,7 +28,7 @@ const SEO: React.FC<ISEOComponentProps> = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -64,7 +52,7 @@ const SEO: React.FC<ISEOComponentProps> = ({
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author.name,
+          content: siteMetadata.author.name,
         },
         {
           name: `twitter:title`,

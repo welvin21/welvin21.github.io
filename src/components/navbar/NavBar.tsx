@@ -12,19 +12,17 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Footer } from '../footer';
 import { InternalLink, StyledLink, ColorModeSwitch } from '../common';
-import { LocationContext } from '../../context';
+import { LocationContext, SiteMetadataContext } from '../../context';
 import { Route } from '../../types';
 
-export const PersonalInformation: React.FC<{ siteMetadata: any }> = ({
-  siteMetadata,
-}) => {
+export const PersonalInformation: React.FC = () => {
   const {
     author: {
       name,
       picturePath,
       contacts: { twitter },
     },
-  } = siteMetadata;
+  } = useContext(SiteMetadataContext);
 
   return (
     <Flex direction={'row'} align={'center'} my={1}>
@@ -61,9 +59,9 @@ export const Description: React.FC = () => {
   );
 };
 
-const Menu: React.FC<{ siteMetadata: any }> = ({ siteMetadata }) => {
+const Menu: React.FC = () => {
   const location = useContext(LocationContext);
-  const { menu } = siteMetadata;
+  const { menu } = useContext(SiteMetadataContext);
 
   return (
     <Flex direction={['row', 'row', 'column', 'column']} my={1}>
@@ -85,39 +83,12 @@ const Menu: React.FC<{ siteMetadata: any }> = ({ siteMetadata }) => {
 };
 
 export const NavBar: React.FC = () => {
-  const {
-    site: { siteMetadata },
-  } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            author {
-              name
-              picturePath
-              contacts {
-                twitter {
-                  name
-                  link
-                }
-              }
-            }
-            menu {
-              route
-              text
-            }
-          }
-        }
-      }
-    `
-  );
-
   return (
     <Stack>
-      <PersonalInformation siteMetadata={siteMetadata} />
+      <PersonalInformation />
       <ColorModeSwitch />
       <Description />
-      <Menu siteMetadata={siteMetadata} />
+      <Menu />
       <Box display={['none', 'none', 'flex', 'flex']}>
         <Footer />
       </Box>

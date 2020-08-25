@@ -1,33 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Flex, Text, Box, ListItem } from '@chakra-ui/core';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import { Hackathon } from '../../types';
 import { StyledLink } from '../common';
+import { SiteMetadataContext } from '../../context';
 
 export const Awards: React.FC = () => {
   const {
-    site: { siteMetadata },
-  } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          author {
-            hackathons {
-              name
-              organiser
-              achievement
-              link
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const {
     author: { hackathons },
-  } = siteMetadata;
+  } = useContext(SiteMetadataContext);
 
   return (
     <Flex my={1} direction="column">

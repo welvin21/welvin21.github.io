@@ -2,11 +2,11 @@
 path: '/blog/introduction-to-artificial-neural-network-part-1'
 date: '2020-08-30'
 title: 'Introduction to Artificial Neural Network: Part 1'
-excerpt: 'The term Neural Network has been used as a buzzword a lot more than anything else in the world of Computer Science, especially during the last couple decades. What is exactly it?'
+excerpt: 'The term Neural Network has been used as a buzzword a lot more than anything else in the world of Computer Science, especially during the last couple decades. What exactly is it?'
 tags: ['Machine Learning', 'Neural Network', 'Python']
 ---
 
-The term Neural Network has been used as a buzzword a lot more than anything else in the world of Computer Science, especially during the last couple decades. What is exactly it?
+The term Neural Network has been used as a buzzword a lot more than anything else in the world of Computer Science, especially during the last couple decades. What exactly is it?
 
 ---
 

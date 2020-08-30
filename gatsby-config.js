@@ -67,6 +67,12 @@ module.exports = {
               theme: 'monokai',
             },
           },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`,
+            },
+          },
         ],
       },
     },

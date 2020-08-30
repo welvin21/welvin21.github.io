@@ -26,7 +26,7 @@ const BlogPostTemplate: React.FC<any> = ({ data, location }) => {
 
   const {
     mdx: {
-      frontmatter: { title, date, path, tags },
+      frontmatter: { title, date, path, tags, excerpt },
       body: content,
     },
     site: { siteMetadata },
@@ -35,7 +35,7 @@ const BlogPostTemplate: React.FC<any> = ({ data, location }) => {
   return (
     <LocationContext.Provider value={location}>
       <SiteMetadataContext.Provider value={siteMetadata}>
-        <SEO title={title} />
+        <SEO title={title} description={excerpt} />
         <Box
           backgroundColor={`background.${colorMode}`}
           color={`text.${colorMode}`}

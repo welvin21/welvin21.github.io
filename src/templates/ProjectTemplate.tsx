@@ -14,7 +14,7 @@ const ProjectTemplate: React.FC<any> = props => {
 
   const {
     mdx: {
-      frontmatter: { title, date, path },
+      frontmatter: { title, date, path, excerpt },
       body: content,
     },
     site: { siteMetadata },
@@ -24,7 +24,7 @@ const ProjectTemplate: React.FC<any> = props => {
     <LocationContext.Provider value={location}>
       <SiteMetadataContext.Provider value={siteMetadata}>
         <Layout>
-          <SEO title={title} />
+          <SEO title={title} description={excerpt} />
           <Box>
             <Heading mb={4}>{title}</Heading>
             <MDXProvider components={MDXProviderComponents()}>

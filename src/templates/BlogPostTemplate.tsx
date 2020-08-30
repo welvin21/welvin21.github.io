@@ -1,3 +1,4 @@
+require(`katex/dist/katex.min.css`);
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Heading, Box, Text, Stack, useColorMode } from '@chakra-ui/core';

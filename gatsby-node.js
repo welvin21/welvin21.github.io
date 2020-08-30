@@ -9,6 +9,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     `./src/templates/BlogPostTemplate.tsx`
   );
 
+  const TagTemplate = require.resolve(`./src/templates/TagTemplate.tsx`);
+
   const projects = await graphql(`
     {
       allMdx(
@@ -38,6 +40,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               path
+              title
+              date
+              excerpt
+              tags
             }
           }
         }
@@ -78,4 +84,25 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       });
     }
   );
+
+  const tagsCount = {};
+  for (const {
+    node: { frontmatter: blogPost },
+  } of blogPosts.data.allMdx.edges) {
+    for (const tag of blogPost.tags) {
+      if (Object.keys(tagsCount).includes(tag)) {
+        tagsCount[tag].push(blogPost);
+      } else {
+        tagsCount[tag] = [blogPost];
+      }
+    }
+  }
+
+  Object.keys(tagsCount).forEach(tag => {
+    createPage({
+      path: `/tags/${tag.toLowerCase().replace(' ', '-')}`,
+      component: TagTemplate,
+      context: { tag, posts: tagsCount[tag] },
+    });
+  });
 };

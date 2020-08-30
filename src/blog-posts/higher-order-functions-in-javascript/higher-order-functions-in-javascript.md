@@ -74,7 +74,7 @@ const addTwoNumbers = new Function('a', 'b', functionBody);
 console.log(addTwoNumbers(1, 2)); // prints 3
 ```
 
-**NOTE** - <u>Please be noted that this way of creating a function might not align with the best practice out there. I rarely if never see someone using this approach before. You should use the `function` keyword or the infamous ES6 arrow function instead.</u>
+**NOTE** - <u>Please be noted that this way of creating a function might not align with the best practice out there. I rarely if not never see someone using this approach before. You should use the `function` keyword or the infamous ES6 arrow function syntax instead.</u>
 
 ##### Passing function around
 
@@ -189,7 +189,27 @@ const heightsFixed = heights.map(fixHeight);
 console.log(heightsFixed); // prints [ 175, 173, 190, 174, 173 ]
 ```
 
-Or even simpler:
+Breaking down the piece of code above, here `fixHeight` is what we refer to as a callback function. It is just a function which is passed as an argument to another function.
+
+You might have also noticed that there are 3 parameters in the `fixHeight` function definition. These 3 parameters will change every time we arrive at a new array entry. For example, in the example above, `fixHeight` will be executed 5 times, one execution each for each element in the `heights` array. And the corresponding callback function arguments would be:
+
+```javascript
+const heights = [170, 168, 185, 169, 168];
+const ERROR = 5;
+function fixHeight(element, index, array) {
+  console.log({ element, index, array });
+}
+
+heights.map(fixHeight);
+//prints
+//{ element: 170, index: 0, array: [ 170, 168, 185, 169, 168 ] }
+//{ element: 168, index: 1, array: [ 170, 168, 185, 169, 168 ] }
+//{ element: 185, index: 2, array: [ 170, 168, 185, 169, 168 ] }
+//{ element: 169, index: 3, array: [ 170, 168, 185, 169, 168 ] }
+//{ element: 168, index: 4, array: [ 170, 168, 185, 169, 168 ] }
+```
+
+The implementation could indeed be made a little bit simpler.
 
 ```javascript
 const heights = [170, 168, 185, 169, 168];
@@ -202,7 +222,7 @@ const heightsFixed = heights.map(function (element, index, array) {
 console.log(heightsFixed); // prints [ 175, 173, 190, 174, 173 ]
 ```
 
-**RECALL** - <u>The above implementations are made possible due to the object-like behaviour of functions in JavaScript. With that, we are able to pass the callback function around as an argument to another function.</u>
+**RECALL** - <u>The two implementations we discussed just now are made possible due to the object-like behaviour of functions in JavaScript. With that, we are able to pass the callback function around as an argument to another function.</u>
 
 ###### Array.prototype.filter
 

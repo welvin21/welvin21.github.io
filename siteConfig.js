@@ -16,6 +16,10 @@ const siteConfig = {
       text: 'Blog',
       route: '/blog',
     },
+    {
+      text: 'Tags',
+      route: '/tags',
+    },
   ],
   author: {
     name: 'Welvin Bun',

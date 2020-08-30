@@ -75,7 +75,7 @@ Let's jump into some codes to get a better hang of what I have just explained. W
 But before that, recall that we need something called an _activation function_ to be able to build an artificial neuron. To avoid confusion, we'll be implementing one using one of the most common _activation function_, namely the [sigmoid function](https://deepai.org/machine-learning-glossary-and-terms/sigmoid-function). It can be represented by the following formula:
 
 $$
-f(x) = \frac{1}{1 + \exp^{-x}}
+f(x) = \frac{1}{1 + e^{-x}}
 $$
 
 The semantic of the _sigmoid function_ is basically to bound any value $x, x ∈ (-\infin, \infin)$, to $x', x' ∈ (0, 1)$.
@@ -118,7 +118,7 @@ Please be aware that for some of neurons in the middle (N<sub>3</sub>, N<sub>4</
 In brief, the feedforward flow of our neural network example can be represented by the following mathematical expressions (assume we use sigmoid as the activation function for all neurons).
 
 $$
-f(x) = \frac{1}{1 + \exp^{-x}}
+f(x) = \frac{1}{1 + e^{-x}}
 $$
 
 $$

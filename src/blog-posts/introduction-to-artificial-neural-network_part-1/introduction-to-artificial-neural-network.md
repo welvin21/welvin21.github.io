@@ -1,9 +1,9 @@
 ---
-path: '/blog/introduction-to-artificial-neural-network'
+path: '/blog/introduction-to-artificial-neural-network-part-1'
 date: '2020-08-30'
-title: 'Introduction to Artificial Neural Network'
+title: 'Introduction to Artificial Neural Network: Part 1'
 excerpt: 'The term Neural Network has been used as a buzzword a lot more than anything else in the world of Computer Science, especially during the last couple decades. What is exactly it?'
-tags: ['Machine Learning', 'Neural Network']
+tags: ['Machine Learning', 'Neural Network', 'Python']
 ---
 
 The term Neural Network has been used as a buzzword a lot more than anything else in the world of Computer Science, especially during the last couple decades. What is exactly it?
@@ -66,18 +66,123 @@ $$
 y_{1} = f((x_{1} * w_{1}) + (x_{2} * w_{2}) + b)
 $$
 
+Those whole series of processes is what we call as **feedforward**. I usually think of it as a chain of mathematical operations involving multiple inputs to finally arrive at an output.
+
+##### Coding an Artificial Neuron from scratch
+
+Let's jump into some codes to get a better hang of what I have just explained. We'll be using python for the demo, and the code would follow _object-oriented_ paradigm.
+
+But before that, recall that we need something called an _activation function_ to be able to build an artificial neuron. To avoid confusion, we'll be implementing one using one of the most common _activation function_, namely the [sigmoid function](https://deepai.org/machine-learning-glossary-and-terms/sigmoid-function). It can be represented by the following formula:
+
+$$
+f(x) = \frac{1}{1 + \exp^{-x}}
+$$
+
+The semantic of the _sigmoid function_ is basically to bound any value $x, x ∈ (-\infin, \infin)$, to $x', x' ∈ (0, 1)$.
+
+Now after getting some ideas about what a _sigmoid function_ does, we can jump into our code.
+
+```python
+import numpy as np
+
+class Neuron:
+  def __init__(self, weights, biases):
+    self.weights = np.array(weights)
+    self.biases = np.array(biases)
+
+  def sigmoid(self, input):
+    return 1 / (1 + np.exp(-input))
+
+  def feedForward(self, inputs):
+    weights, biases = self.weights, self.biases
+    inputs = np.array(inputs)
+
+    return self.sigmoid(np.dot(inputs, weights) + biases)
+
+neuron = Neuron([0.3, 0.7], 0.5)
+print(neuron.feedForward([16, 2])) #prints 0.9987706013787226
+```
+
 ### Neural network
 
-### Activation functions
+##### Introduction
 
-### Back propagation
+Recall our previous discussion about the biological neuron where we touched a little bit about our _Central Nervous System_. An artificial neural network is to artificial neurons as our central nervous system is to biological neurons. To put it simpler, it is basically just a bunch of interconnected artificial neurons spread across multiple layers where each neuron carries different set of weights and bias.
+
+![Neural network example](./neural-network.png)
+
+<center>Example of a 5-neurons Artificial Neural Network.</center>
+
+Please be aware that for some of neurons in the middle (N<sub>3</sub>, N<sub>4</sub>, and N<sub>5</sub>), their inputs come from the computational result of the previous neurons. This is what we refer to as _hidden layers_, since they don't interact directly with the external input or output data anyway.
+
+In brief, the feedforward flow of our neural network example can be represented by the following mathematical expressions (assume we use sigmoid as the activation function for all neurons).
+
+$$
+f(x) = \frac{1}{1 + \exp^{-x}}
+$$
+
+$$
+N_{1} = f((x_{1} * w_{1.1}) + (x_{2} * w_{1.2}) + b_{1})
+$$
+
+$$
+N_{2} = f((x_{1} * w_{2.1}) + (x_{2} * w_{2.2}) + b_{2})
+$$
+
+$$
+N_{3} = f((N_{1} * w_{3.1}) + (N_{2} * w_{3.2}) + b_{3})
+$$
+
+$$
+N_{4} = f((N_{1} * w_{4.1}) + (N_{2} * w_{4.2}) + b_{4})
+$$
+
+$$
+Y_{1} = N_{5} = f((N_{3} * w_{5.1}) + (N_{4} * w_{5.2}) + b_{5})
+$$
+
+##### Coding a neural network from scratch
+
+Building upon our previous code example, let's build a simple neural network which consists of 5 neurons.
+
+```python
+import numpy as np
+
+class Neuron():
+  # Please see the code example above to see the detailed class definition of Neuron
+  pass
+
+class NeuralNetwork():
+  def __init__(self):
+    # We'll create a set of homogeneous neurons for simplicity
+    # Feel free to play around with the code and change stuffs
+    self.n1 = Neuron([0.3, 0.7], 0.5)
+    self.n2 = Neuron([0.3, 0.7], 0.5)
+    self.n3 = Neuron([0.3, 0.7], 0.5)
+    self.n4 = Neuron([0.3, 0.7], 0.5)
+    self.n5 = Neuron([0.3, 0.7], 0.5)
+
+  def feedForward(self, inputs):
+    n1_result = self.n1.feedForward(inputs)
+    n2_result = self.n2.feedForward(inputs)
+
+    n3_result = self.n3.feedForward(np.array([n1_result, n2_result]))
+    n4_result = self.n4.feedForward(np.array([n1_result, n2_result]))
+
+    n5_result = self.n5.feedForward(np.array([n3_result, n4_result]))
+
+    return n5_result
+
+neuralNetwork = NeuralNetwork()
+print(neuralNetwork.feedForward([16, 2])) # prints 0.7887473167735787
+```
 
 ### Conclusion
 
-In conclusion, we have covered some fundamental concepts of _First-Class Functions_. You have seen some examples showing that JavaScript function is nothing but an instance of the built-in `Function` class.
+In conclusion, we have taken a look at the definition of neurons from both biological and machine learning perspectives. We have also learnt about how each one of them works.
 
-We also have taken 2 different perspectives when discussing about the idea behind _Higher-Order Functions_, from both Mathematics and Computer Science point of views. They basically refer to the same concept with slightly different implementations.
+We are all now must be familiar with what an artificial neural network is. It is nothing but a bunch of interconnected artificial neurons. Given a set of inputs, the goal is to find an output based on some mathematical expressions embedded in each of the neuron.
 
-Finally, we are all now must be familiar with some built-in JavaScript _Higher-Order Functions_ and their use cases through the code examples provided.
+In the upcoming post, we will see how to train such a network using some more advanced concepts like [Loss function](https://en.wikipedia.org/wiki/Loss_function) and [Gradient descent](https://en.wikipedia.org/wiki/Gradient_descent#:~:text=Gradient%20descent%20is%20a%20first,function%20at%20the%20current%20point.).
 
 That's it, I hope you enjoy reading my post and thanks for coming by!

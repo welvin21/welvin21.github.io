@@ -140,19 +140,19 @@ Let's take a look at some examples to get a better understanding.
 
 ##### Higher-Order Function in Mathematics
 
-Let's begin with a function **f(x) = x + 1, x ∈ Z**. In your opinion, do you think the function **f(x)** is a _Higher-Order Function_?
+Let's begin with a function $f(x) = x + 1, x ∈ \Z$. In your opinion, do you think the function $f(x)$ is a _Higher-Order Function_?
 
-The answer is **no, it's not**. Recall the two properties that a _Higher-Order Function_ must have (at least one). Does the function **f(x)** take one or more functions as its input argument(s)? Well it's well-defined that **f(x)** takes one scalar integer argument named **x**. Since **x** as the only input of **f(x)** is not a function, hence **f(x)** does not comply with the first rule that we stated before.
+The answer is **no, it's not**. Recall the two properties that a _Higher-Order Function_ must have (at least one). Does the function $f(x)$ take one or more functions as its input argument(s)? Well it's well-defined that $f(x)$ takes one scalar integer argument named $x$. Since $x$ as the only input of $f(x)$ is not a function, hence $f(x)$ does not comply with the first rule that we stated before.
 
-The second question to ask is, does the function **f(x)** return another function as its output? Again, it can be seen clearly that what **f(x)** does is just adding a scalar value of **1** to its input **x**, and returning that addition value as the output. Therefore, **f(x)** returns another scalar value and not a function, so neither the first nor the second condition is met.
+The second question to ask is, does the function $f(x)$ return another function as its output? Again, it can be seen clearly that what $f(x)$ does is just adding a scalar value of **1** to its input $x$, and returning that addition value as the output. Therefore, $f(x)$ returns another scalar value and not a function, so neither the first nor the second condition is met.
 
-With that being said, we can conclude that **f(x)** does not satisfy any of the requirements of a _Higher-Order Function_, and hence it's not of its kind.
+With that being said, we can conclude that $f(x)$ does not satisfy any of the requirements of a _Higher-Order Function_, and hence it's not of its kind.
 
-Let's move on to our second function **D(g(x)) = d(g(x))/dx, g(x) is differentiable for any x, x ∈ R**. Is **D(g(x))** a _Higher-Order Function_?
+Let's move on to our second function $D(g(x)) = \frac{d(g(x))}{dx}$, where $g(x)$ is differentiable for any $x, x ∈ \reals$. Is $D(g(x))$ a _Higher-Order Function_?
 
-Indeed **it is**. Using the same logic that we used to analyse our first function **f(x)**, it's not hard to show that **D(g(x))** is a **Higher-Order Function**. First, it accepts another function **g(x)** as its input argument. In addition to that, it also returns another function **g'(x)** as its output where **g'(x)** is the first derivative of **g(x)**.
+Indeed **it is**. Using the same logic that we used to analyse our first function $f(x)$, it's not hard to show that $D(g(x))$ is a **Higher-Order Function**. First, it accepts another function $g(x)$ as its input argument. In addition to that, it also returns another function $g'(x)$ as its output where $g'(x)$ is the first derivative of $g(x)$.
 
-**NOTE** - <u>**D(g(x))** is a quiet common operator in mathematics called the [Differential operator](https://en.wikipedia.org/wiki/Differential_operator). The semantic of it is basically it maps any differentiable functions to their corresponding first-order derivatives.</u>
+**NOTE** - $D(g(x))$ is a quiet common operator in mathematics called the [Differential operator](https://en.wikipedia.org/wiki/Differential_operator). The semantic of it is basically it maps any differentiable functions to their corresponding first-order derivatives.
 
 ##### Higher-Order Functions in JavaScript
 

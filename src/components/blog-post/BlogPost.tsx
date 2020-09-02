@@ -13,6 +13,7 @@ export const BlogPost: FunctionComponent<IBlogPost> = ({
   tags,
 }) => {
   const { colorMode } = useColorMode();
+  const highlightTag = tags[0];
 
   return (
     <Box mb={4}>
@@ -23,7 +24,15 @@ export const BlogPost: FunctionComponent<IBlogPost> = ({
         </Text>
       </StyledLink>
       <Text fontSize="sm" as="b" color={`text.${colorMode}`}>
-        {date.toUpperCase()} | {tags[0].toUpperCase()}
+        {date.toUpperCase()} {'| '}
+        <StyledLink
+          href={`/tags/${highlightTag.toLowerCase().replace(' ', '-')}`}
+          isExternal={false}
+          color={`secondary.${colorMode}.500`}
+          _hover={{ color: `primary.${colorMode}.400` }}
+        >
+          {highlightTag.toUpperCase()}
+        </StyledLink>
       </Text>
     </Box>
   );

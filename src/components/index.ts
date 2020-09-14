@@ -9,6 +9,7 @@ export {
   PathFinder,
   ColorModeSwitch,
   Tags,
+  Pagination,
 } from './common';
 export { Project } from './project';
 export { BlogPost } from './blog-post';

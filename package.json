@@ -65,7 +65,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "cd git-hooks && ./pre-push.sh"
+      "post-merge": "cd git-hooks && ./post-merge.sh"
     }
   }
 }

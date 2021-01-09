@@ -2,5 +2,5 @@
 
 node updateConfig.js
 git add -A
-git commit -m "AUTO PRE-PUSH HOOK: Update lastUpdated field in siteConfig"
+git commit -m "AUTO POST-MERGE HOOK: Update siteConfig"
 git push --no-verify

@@ -27,7 +27,7 @@ export default {
     },
     background: {
       light: '#FFF',
-      dark: '#0D0D0D',
+      dark: '#1A1F2D',
     },
   },
   breakpoints: ['30em', '48em', '62em', '80em'],

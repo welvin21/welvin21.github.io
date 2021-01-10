@@ -19,10 +19,10 @@ export const BlogPost: FunctionComponent<IBlogPost> = ({
     <Box mb={4}>
       <StyledLink href={path} isExternal={false}>
         <Heading size="md">{title}</Heading>
-        <Text fontSize="md" color={`text.${colorMode}`}>
-          {truncateText({ text: excerpt, limit: 250 })}
-        </Text>
       </StyledLink>
+      <Text fontSize="md" color={`text.${colorMode}`}>
+        {truncateText({ text: excerpt, limit: 250 })}
+      </Text>
       <Text fontSize="sm" as="b" color={`text.${colorMode}`}>
         {date.toUpperCase()} {'| '}
         <StyledLink

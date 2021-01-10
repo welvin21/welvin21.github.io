@@ -18,7 +18,10 @@ export const Description: React.FC = () => {
         </StyledLink>
         {` and `}
         <StyledLink href="https://freehunter.io/">Freehunter</StyledLink>
-        {` respectively before. I enjoy doing web development, machine learning, and algorithms. Here are some of the `}
+        {` respectively in the past. Currently learning and building things as a part-time SWE at `}
+        <StyledLink href="https://oursky.com/">Oursky</StyledLink>
+
+        {`. I enjoy doing web development, machine learning, and algorithms. Here are some of the `}
         <StyledLink href="/projects" isExternal={false}>
           projects
         </StyledLink>

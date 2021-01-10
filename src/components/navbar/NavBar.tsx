@@ -49,11 +49,7 @@ export const Description: React.FC = () => {
         <StyledLink href="https://studentambassadors.microsoft.com/">
           @Microsoft
         </StyledLink>
-        . CS '22{' '}
-        <StyledLink href="https://www.hku.hk">
-          @The University of Hong Kong
-        </StyledLink>
-        .
+        . CS '22 <StyledLink href="https://www.hku.hk">@HKU</StyledLink>.
       </Text>
     </Flex>
   );

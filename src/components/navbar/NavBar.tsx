@@ -41,11 +41,19 @@ export const Description: React.FC = () => {
   return (
     <Flex my={1}>
       <Text color={`tertiary.${colorMode}`}>
-        Former Data Science Intern{' '}
+        Current Undergraduate Research Assistant{' '}
+        <StyledLink href="http://www.visionlab.cs.hku.hk/">
+          @HKUCV Lab
+        </StyledLink>
+        . Former Technology Summer Analyst{' '}
+        <StyledLink href="https://www.morganstanley.com/">
+          @Morgan Stanley
+        </StyledLink>
+        , Data Science{' '}
         <StyledLink href="https://societegenerale.com">
           @Societe Generale
         </StyledLink>
-        . Student Ambassador{' '}
+        , Student Ambassador{' '}
         <StyledLink href="https://studentambassadors.microsoft.com/">
           @Microsoft
         </StyledLink>

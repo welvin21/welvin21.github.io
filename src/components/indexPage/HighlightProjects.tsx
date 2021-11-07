@@ -14,7 +14,9 @@ export const HighlightProjects: React.FC = () => {
         allMdx(
           filter: {
             fileAbsolutePath: { regex: "/src/projects/" }
-            frontmatter: { title: { in: ["Sort It", "Fixels", "SLS"] } }
+            frontmatter: {
+              title: { in: ["Trashtank", "Sort It", "Fixels", "SLS"] }
+            }
           }
           sort: { order: DESC, fields: [frontmatter___date] }
         ) {

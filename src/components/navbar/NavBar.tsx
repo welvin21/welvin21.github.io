@@ -45,11 +45,11 @@ export const Description: React.FC = () => {
         <StyledLink href="http://www.visionlab.cs.hku.hk/">
           @HKUCV Lab
         </StyledLink>
-        . Former Technology Summer Analyst{' '}
+        . Prev Technology Summer Analyst{' '}
         <StyledLink href="https://www.morganstanley.com/">
           @Morgan Stanley
         </StyledLink>
-        , Data Science{' '}
+        , Data Science Intern{' '}
         <StyledLink href="https://societegenerale.com">
           @Societe Generale
         </StyledLink>

@@ -14,7 +14,7 @@ export const AboutWebsite: React.FC = () => {
           href="https://www.typescriptlang.org/"
           children="TypeScript"
         />
-        , and is open source on{' '}
+        , and is on{' '}
         <StyledLink
           href="https://github.com/welvin21/personal_website"
           children="GitHub"

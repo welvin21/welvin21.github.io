@@ -7,7 +7,8 @@
     { "text": "About", "route": "/" },
     { "text": "Projects", "route": "/projects" },
     { "text": "Blog", "route": "/blog" },
-    { "text": "Tags", "route": "/tags" }
+    { "text": "Tags", "route": "/tags" },
+    { "text": "Resume", "route": "/resume.pdf" }
   ],
   "author": {
     "name": "Welvin Bun",

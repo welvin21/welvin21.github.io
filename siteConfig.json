@@ -2,7 +2,7 @@
   "url": "https://welvin21.com",
   "title": "welvin21.com",
   "description": "Welvin's official website.",
-  "lastUpdated": "07/11/2021, at 03:23:50 UTC",
+  "lastUpdated": "09/02/2022, at 08:18:38 UTC",
   "menu": [
     { "text": "About", "route": "/" },
     { "text": "Projects", "route": "/projects" },

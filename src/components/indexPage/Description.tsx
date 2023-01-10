@@ -10,7 +10,7 @@ export const Description: React.FC = () => {
     <Flex my={1} direction="column">
       <Heading mb={2}>About me</Heading>
       <Text color={`text.${colorMode}`}>
-        {`I enjoy doing web development, machine learning, and algorithms. Here are some of the `}
+        {`I enjoy doing stuffs revolving around software engineering, machine learning, and algorithms. Here are some of the `}
         <StyledLink href="/projects" isExternal={false}>
           projects
         </StyledLink>
